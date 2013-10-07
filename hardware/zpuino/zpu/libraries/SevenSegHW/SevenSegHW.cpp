@@ -31,6 +31,11 @@ SEVENSEGHW::SEVENSEGHW()
 {
 }
 
+void SEVENSEGHW::begin(int address)
+{
+    this->nBaseAddress = address;
+}
+
 // Set the 4 digits Int value
 void SEVENSEGHW::setIntValue(unsigned int value, unsigned int pos_dot)
 {
@@ -100,8 +105,8 @@ void SEVENSEGHW::setHexValue(unsigned int value, unsigned int digit)
 void SEVENSEGHW::setBrightness(unsigned int value)
 {
     //SEVSEGBRIGHT = (value << 4 )| getSegmentStatus();
-	//SEVSEGBRIGHT = (0xE000F);
-	SEVSEGBRIGHT = (0xF | (value<<16));
+    //SEVSEGBRIGHT = (0xE000F);
+    SEVSEGBRIGHT = (0xF | (value<<16));
 }
 
 // Get Brightness
@@ -132,6 +137,3 @@ unsigned int SEVENSEGHW::getSegmentStatus()
 {
     return SEVSEGBRIGHT & 0xF ;
 }
-
-
-
