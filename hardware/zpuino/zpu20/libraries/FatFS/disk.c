@@ -49,14 +49,18 @@ static int TM_FATFS_SD_CardType;			/* Card type flags */
 #define FATFS_CS_HIGH spi_select(1)
 #define FATFS_CS_LOW  spi_select(0)
 
-#define FATFS_DEBUG_SEND_USART(x)
+#define FATFS_DEBUG_SEND_USART(x) 
 
 extern unsigned int c_millis();
 
 /* Initialize MMC interface */
 static void init_spi (void) {
+    int i;
     FATFS_CS_HIGH;
-    usleep(10000);
+    /* Send a bunch of clocks  */
+    for (i=0;i<10;i++)
+        spi_transfer8(0xff);
+        //    usleep(10000);
 }
 
 
