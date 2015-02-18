@@ -16,6 +16,7 @@ static void *sd_open(const char *path)
     r = f_open (f, path, FA_READ);            /* Open or create a file */
 
     if (r!=FR_OK) {
+        printf("SD open error: %d\n", r);
         free(f);
         return NULL;
     }
@@ -44,6 +45,8 @@ static ssize_t sd_read(void *handle,void *dest,size_t size)
             printf("SD error read: %d\n",r);
             return -r;
         }
+        if (bytes==0)
+            break;
         toread-=bytes;
         b+=bytes;
     }
