@@ -283,17 +283,26 @@ size_t fwrite(const void *ptr, size_t size, size_t nmemb,
 
 size_t fread(void *ptr, size_t size, size_t nmemb, FILE *stream)
 {
-    size_t n=0;
+    size_t n=0,bytesread;
     unsigned char *ptrc=(unsigned char*)ptr;
     if (!stream || stream->fd<0)
         return -1;
- //   fprintf(stderr,"Req read %d %d\n", size, nmemb);
-    while (nmemb--) {
-        n+=read( stream->fd, ptrc, size);
-        ptrc+=size;
-    };
+    /* Speed things if size==1 */
+    if (size==1) {
+        n = read(stream->fd,ptrc,nmemb);
+        if (n<0)
+            n=0;
+    } else {
+        while (nmemb--) {
+            bytesread=read( stream->fd, ptrc, size);
+            if (bytesread!=size)
+                break;
+            n++;
+            ptrc+=size;
+        }
+    }
 #if 0
-    fprintf(stderr,"Read fd %d, %d\r\n",stream->fd,n);
+    fprintf(stderr,"Read fd %d, size %d, nmemb %d, %d\r\n",stream->fd,size,nmemb,n);
     {
         int i;
         for (i=0;i<n;i++) {
