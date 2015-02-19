@@ -14,7 +14,9 @@
 #define JPEGLIB_H
 
 #include <sys/types.h>
-
+#ifdef ZPU
+#include <zstdio.h>
+#endif
 #ifdef __cplusplus
 extern "C" {
 #endif
