@@ -1,4 +1,4 @@
-#include "fatfs/diskio.h"
+#include "diskio.h"
 //#include <unistd.h>
 //#include <stdio.h>
 #include "disk.h"

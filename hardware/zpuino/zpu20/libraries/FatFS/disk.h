@@ -3,7 +3,7 @@
 
 #define _USE_IOCTL 1
 
-#include "fatfs/diskio.h"
+#include "diskio.h"
 
 
 DRESULT SD_disk_ioctl (

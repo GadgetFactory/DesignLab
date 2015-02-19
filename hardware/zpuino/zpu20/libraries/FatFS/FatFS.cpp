@@ -14,6 +14,7 @@ void FatFS_class::begin(SPIClass &spi, int csline)
     s_csline=csline;
     digitalWrite(csline,HIGH);
     pinMode(csline,OUTPUT);
+    spi.setDataMode(SPI_MODE3);
     register_sd();
 }
 

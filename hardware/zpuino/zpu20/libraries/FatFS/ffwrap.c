@@ -1,4 +1,4 @@
-#include "fatfs/ff.h"
+#include "ff.h"
 #include "zfdevice.h"
 #include <stdio.h>
 #include <string.h>
