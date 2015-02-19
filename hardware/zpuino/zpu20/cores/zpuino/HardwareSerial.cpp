@@ -76,7 +76,7 @@ int serial_register_device(const char *name, void*data)
     char fname[32];
     int r = zfRegisterDevice(name,&zf_serial_devops, data);
     if (r==0) {
-        sprintf(fname,"dev:%s", name);
+        sprintf(fname,"/dev/%s", name);
         stdio_register_console(fname);
     }
     return r;
