@@ -27,7 +27,7 @@ void SPIClass::begin()
     if (deviceBegin(VENDOR_ZPUINO, PRODUCT_ZPUINO_SPI)!=0) {
         return;
     }
-    REG(0)=BIT(SPICP1)|BIT(SPIEN)|BIT(SPIBLOCK);
+    REG(0)=BIT(SPICP1)|BIT(SPIEN)|BIT(SPIBLOCK)|BIT(SPISRE)|BIT(SPICPOL);
 }
 
 void SPIClass::begin(const WishboneSlot &slot)
@@ -113,12 +113,17 @@ void SPIClass::setBitOrder(int bitOrder)
 
 void SPIClass::setDataMode(int mode)
 {
-    REG(0) = (REG(0) & ~SPI_MODE_MASK) | (mode<<SPICPOL);
+    int r = REG(0);
+
+    r = (r & ~SPI_MODE_MASK) | (mode<<SPICPOL);
+    REG(0) = r;
 }
 
 void SPIClass::setClockDivider(int rate)
 {
-    REG(0) = (REG(0) & ~SPI_CLOCK_MASK) | (rate<<SPICP0);
+    int r = REG(0);
+    r = (r & ~SPI_CLOCK_MASK) | (rate<<SPICP0);
+    REG(0) = r;
 }
 
 
