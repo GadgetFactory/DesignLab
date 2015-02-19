@@ -152,9 +152,13 @@ public class Platform {
           if (!vids.isEmpty()) {
             List<String> pids = new LinkedList<String>(board.getPreferences().subTree("pid").values());
             for (int i = 0; i< vids.size(); i++) {
+              List<String> names = new LinkedList<String>(board.getPreferences().subTree("name").values());
               String vidPid = vids.get(i) + "_" + pids.get(i);
               if (vidPid.toUpperCase().equals(readVIDPID)) {
-                return board.getName();
+                if (names!=null && names.size()>i) {
+                  return names.get(i);
+                } else
+                  return board.getName();
               }
             }
           }

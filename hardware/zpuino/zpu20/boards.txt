@@ -93,6 +93,7 @@ zpuino20_pipistrello_lx45.build.extraSflags=-DBOARD_ID=0xBA011A00
 zpuino20_papilio_duo2m.name=ZPUino 2.0 on Papilio DUO (LX9 with 2MB SRAM)
 zpuino20_papilio_duo2m.vid.0=0x0403
 zpuino20_papilio_duo2m.pid.0=0x7bc0
+zpuino20_papilio_duo2m.name.0=Papilio DUO Platform
 zpuino20_papilio_duo2m.boardid=0xB4051500
 zpuino20_papilio_duo2m.upload.protocol=zpuino-serial
 zpuino20_papilio_duo2m.upload.maximum_size=8388608
