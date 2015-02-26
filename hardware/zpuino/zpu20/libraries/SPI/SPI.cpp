@@ -119,12 +119,17 @@ void SPIClass::setBitOrder(int bitOrder)
 
 void SPIClass::setDataMode(int mode)
 {
-    REG(0) = (REG(0) & ~SPI_MODE_MASK) | (mode<<SPICPOL);
+    int r = REG(0);
+
+    r = (r & ~SPI_MODE_MASK) | (mode);
+    REG(0) = r;
 }
 
 void SPIClass::setClockDivider(int rate)
 {
-    REG(0) = (REG(0) & ~SPI_CLOCK_MASK) | (rate<<SPICP0);
+    int r = REG(0);
+    r = (r & ~SPI_CLOCK_MASK) | (rate);
+    REG(0) = r;
 }
 
 

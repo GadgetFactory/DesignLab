@@ -1,6 +1,7 @@
 #ifndef __BASEDEVICE_H__
 #define __BASEDEVICE_H__
 
+#include <config.h>
 #include "register.h"
 #include "DeviceRegistry.h"
 
