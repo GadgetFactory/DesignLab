@@ -3,8 +3,9 @@
 
 #include <sys/types.h>
 #include <sys/stat.h>
+#include <config.h>
 
-#ifndef NOSTDIO
+#ifndef NOPOSIX
 #define HAVE_ZFDEVICE
 
 #ifdef __cplusplus

@@ -3,6 +3,7 @@
 
 #include "register.h"
 #include <zpuino-types.h>
+#include <config.h>
 
 #define VENDOR_ANY 0xff
 #define PRODUCT_ANY 0xff
