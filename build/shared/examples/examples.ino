@@ -35,6 +35,12 @@ http://forum.gadgetfactory.net
 
 TABLE OF CONTENTS FOR EXAMPLE PROJECTS
 
+UTILITY PROJECTS
+  Wishbone Slots
+        This is a very useful sketch that shows what is connected to the ZPUino Wishbone Slots.
+        example://Show_Wishbone_Devices/Show_Wishbone_Devices.ino
+  
+
 PAPILIO DUO PROJECTS
   QuickStart
 	QuickStart Project - Try out the basic Papilio DUO functionality
@@ -42,16 +48,37 @@ PAPILIO DUO PROJECTS
         It outputs the ASCII table on the FPGA serial port and flashes the LED's of any Button/LED Wing connected to any of the Wing Slots.
 	example://Papilio_DUO_QuickStart/Papilio_DUO_QuickStart.ino
 
+  GameDuino
+        Use the GameDuino as VGA output for your circuits. The FPGA runs the GameDuino chip and the AVR runs the GameDuino sketches.
+        For more examples look under File/Examples/Gameduino
+	example://Gameduino/4.Demo/ball/ball.ino
+
   Computing Shield
         Computing Shield Verification - Check all functionality
         This is the project used at the factory to check that everything on the Computing Shield works.
         example://SHIELD_Computing_Shield/examples/Computing_Shield_Verification/Computing_Shield_Verification.ino
       
   LogicStart Shield
+        Clock Divider Example - Divide a clock provided by AVR Chip
+        This is a quick example of generating a 1Hz clock from the AVR chip and then dividing it and outputting the clock on the LEDs of the LogicStart Shield.
+        example://Divider_Example/Divider_Example.ino
+  
+        LogicStart Shield LEDs Example - Control the LEDs from an AVR sketch
+        This project uses a circuit on the FPGA to connect the output of unused AVR pins to the LED's of the LogicStart Shield.
+        example://LogicStartShield_LEDs/LogicStartShield_LEDs.ino
+        
         LogicStart Shield Verification - Check all functionality
         This is the project used at the factory to check that everything on the LogicStart Shield works.
         example://SHIELD_LogicStart_Shield/examples/LogicStart_Shield_Verification/LogicStart_Shield_Verification.ino
         
+  AVR to Wishbone Bridge
+        How to access Wishbone peripherals from the AVR.
+        Go to File/Examples/AVR_Wishbone_Bridge
+		
+  ZPUino VGA Adapter
+		This exciting VGA adapter lets you change resolutions on the fly and use the AdaFruit GFX library to program it. This is the latest and greatest VGA adapter.
+		Go to File/Examples/ZPUino_VGA_Adapter
+  
   Debugging
         AVR Dragon JTAG Debug - Debug the ATmega32U4 chip
         Use this circuit to connect the JTAG port of an AVR Dragon debugger to the Papilio DUO. You can use this to program and debug the ATmega32U4 using AVR Studio.
@@ -109,6 +136,10 @@ HARDWARE
 	VGA Wing - Space Invaders Demo
 	An alien marches across a virtual LCD on the 8 color VGA Wing. This is an example of how easy it is to convert LiquidCrystal code to run on a virtual VGA LCD screen.
 	example://WING_VGA/examples/spaceinvaders_simple/spaceinvaders_simple.ino
+	
+	ZPUino VGA Adapter
+		This exciting VGA adapter lets you change resolutions on the fly and use the AdaFruit GFX library to program it. This is the latest and greatest VGA adapter.
+		Go to File/Examples/ZPUino_VGA_Adapter	
     
   LogicStart MegaWing
 	Hardware Project - LogicStart MegaWing 
@@ -118,36 +149,58 @@ HARDWARE
   Arcade MegaWing
 	Hardware Project - Arcade MegaWing 
 	This is a demo project that shows you how to use draw a circuit that uses all of the Arcade MegaWing components.
-	example://MegaWing_Logicstart/MegaWing_Arcade.ino
+	example://MegaWing_Arcade/MegaWing_Arcade.ino
 
   Analog SPI Wing
 	Hardware Project - Analog Wing 
 	This is a demo project that shows you how to use draw a circuit to use the SPI ADC Analog Wing.
 	example://WING_Analog/WING_Analog.ino	
 	
+  SD Card Wing
+	Hardware Project - SD Card Wing 
+	See examples of how to access a SD card in DesignLab
+	Go to File/Examples/SD
+
 ZPUINO SOFT PROCESSOR PROJECTS
-	QuickStart Project - Try out the basic Papilio functionality
+  QuickStart Project - Try out the basic Papilio functionality
         This is the project that comes pre-loaded on the Papilio One and Papilio Pro boards.
         It outputs the ASCII table on the FPGA serial port and flashes the LED's of any Button/LED Wing connected to any of the Wing Slots.
 	example://Papilio_QuickStart/Papilio_QuickStart.ino
 
-	Audio Project - RetroCade Synth
+  Audio Project - RetroCade Synth
 	How about putting all of these audio chips together and putting them under MIDI control? That's what this project does, there is even a special MegaWing to provide high quality audio jacks, MIDI connnectors, and a Digital readout.
 	example://Audio_RetroCade_Synth/Audio_RetroCade_Synth.ino
+	
+  Serial Ports Project
+	A project with 9 serial ports all connected to the ZPUino at once.
+	example://Multiple_Serial_Ports/Multiple_Serial_Ports.ino
+	
+  ZPUino Flex Pins
+	The ZPUino lets you move certain pins, called Flex Pins, to any other pin on your Papilio board with a couple lines of code.
+	This example sketch shows how Flex pins work.
+	example://Flex_Pins/Flex_Pins.ino	
+	
+  Jet Set Willy
+	Its the Jet Set Willy game recreated with the help of a ZXSpectrum VGA adapter.
+	Go to File/Examples/VGA_ZXSpectrum
 
 BENCHY DEBUGGING PROJECTS
-	Waveform Generator
+  Waveform Generator
 	Generate sin, cos, sawtooth, and square waves and control the frequency using a sketch.
 	example://Benchy_Waveform_Generator/Benchy_Waveform_Generator.ino
 	
-	Stand Alone Logic Analyzer
+  Stand Alone Logic Analyzer
 	This is the "Sump" Logic Analyzer that is used in the Open Bench Logic Sniffer. Use this to make a standalone logic analyzer that is directly connected to the Papilio serial port. Sample at speeds up to 200Mhz!
 	example://Benchy_Sump_LogicAnalyzer/Benchy_Sump_LogicAnalyzer.ino
 
-	JTAG Logic Analyzer
+  JTAG Logic Analyzer
 	This is the "Sump" Logic Analyzer that is used in the Open Bench Logic Sniffer. This example uses the JTAG channel to communicate with your computer. 
 	This allows you to debug your circuits without using the precious serial port. 
 	Drop this into your circuit designs and probe your signals without impacting your design. Sample at speeds up to 200Mhz!
 	example://Benchy_Sump_LogicAnalyzer_JTAG/Benchy_Sump_LogicAnalyzer_JTAG.ino
 	
+MISC PROJECTS
+  Bitcoin Miner
+        Go to File/Examples/BitCoin_Miner to get started mining your very own BitCoins on the Papilio.
+
 */
