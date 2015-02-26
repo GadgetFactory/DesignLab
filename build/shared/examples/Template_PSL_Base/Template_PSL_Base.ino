@@ -4,8 +4,7 @@
  To learn more about using DesignLab please visit http://learn.gadgetfactory.net
 
  Tutorials:
-   http://gadgetfactory.net/learn/2013/10/29/papilio-schematic-library-getting-started/
-  
+
  Related library documentation:
 
  Hardware:

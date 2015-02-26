@@ -11,8 +11,10 @@ Papilio DesignLab IDE brings all of the pieces of FPGA development together in o
 
 SETUP
 If this is your first time using the Papilio ZAP IDE then please take some time to install Xilinx's ISE software and setup the environment.
-http://gadgetfactory.net/learn/2013/10/23/install-xilinxs-free-ise-webpack/
-http://gadgetfactory.net/learn/2013/10/29/papilio-schematic-library-getting-started/
+
+LEARN
+To discover new tutorials for DesignLab visit:
+http://learn.gadgetfactory.net
 
 USAGE
 Start with any of the example projects linked below or create a new project with the Papilio/New Papilio Project menu.
@@ -76,8 +78,8 @@ PAPILIO DUO PROJECTS
         Go to File/Examples/AVR_Wishbone_Bridge
 		
   ZPUino VGA Adapter
-		This exciting VGA adapter lets you change resolutions on the fly and use the AdaFruit GFX library to program it. This is the latest and greatest VGA adapter.
-		Go to File/Examples/ZPUino_VGA_Adapter
+	This exciting VGA adapter lets you change resolutions on the fly and use the AdaFruit GFX library to program it. This is the latest and greatest VGA adapter.
+	Go to File/Examples/ZPUino_VGA_Adapter
   
   Debugging
         AVR Dragon JTAG Debug - Debug the ATmega32U4 chip
@@ -138,8 +140,8 @@ HARDWARE
 	example://WING_VGA/examples/spaceinvaders_simple/spaceinvaders_simple.ino
 	
 	ZPUino VGA Adapter
-		This exciting VGA adapter lets you change resolutions on the fly and use the AdaFruit GFX library to program it. This is the latest and greatest VGA adapter.
-		Go to File/Examples/ZPUino_VGA_Adapter	
+	This exciting VGA adapter lets you change resolutions on the fly and use the AdaFruit GFX library to program it. This is the latest and greatest VGA adapter.
+	Go to File/Examples/ZPUino_VGA_Adapter	
     
   LogicStart MegaWing
 	Hardware Project - LogicStart MegaWing 
