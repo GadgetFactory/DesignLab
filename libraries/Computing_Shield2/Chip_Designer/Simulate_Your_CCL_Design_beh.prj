@@ -1,0 +1,3 @@
+vhdl work "../Wishbone_to_Registers.vhd"
+vhdl work "../Wishbone_Symbol_Example.vhd"
+vhdl work "../Simulate_Your_CCL_Design.vhd"

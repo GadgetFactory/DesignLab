@@ -26,8 +26,13 @@
 #include "SPI.h"
 
 //Uncomment for the SD card on the Papilio DUO Computing Shield
-#define circuit Computing_Shield
-#define CSPIN  16
+//#define circuit Computing_Shield
+//#define CSPIN  16
+//#define WISHBONESLOT 12
+
+//Uncomment for a SD card connected to the CL Wing Slot.
+#define circuit ZPUino_Wings
+#define CSPIN  WING_CL4
 #define WISHBONESLOT 12
 
 File root;

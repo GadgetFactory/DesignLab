@@ -1,0 +1,132 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<wave_config>
+   <wave_state>
+   </wave_state>
+   <db_ref_list>
+      <db_ref path="D:/Dropbox/GadgetFactory/GadgetFactory_Engineering/Papilio-Schematic-Library/examples/Community_Core_Wishbone_Template/DUO_LX9/Simulate_Your_CCL_Design_isim_beh.wdb" id="1" type="auto">
+         <top_modules>
+            <top_module name="numeric_std" />
+            <top_module name="simulate_your_ccl_design" />
+            <top_module name="std_logic_1164" />
+            <top_module name="std_logic_arith" />
+            <top_module name="std_logic_unsigned" />
+            <top_module name="vcomponents" />
+         </top_modules>
+      </db_ref>
+   </db_ref_list>
+   <WVObjectSize size="5" />
+   <wvobject fp_name="group24" type="group">
+      <obj_property name="label">Wishbone Bus</obj_property>
+      <obj_property name="DisplayName">label</obj_property>
+      <wvobject fp_name="/simulate_your_ccl_design/clk" type="logic" db_ref_id="1">
+         <obj_property name="ElementShortName">clk</obj_property>
+         <obj_property name="ObjectShortName">clk</obj_property>
+      </wvobject>
+      <wvobject fp_name="/simulate_your_ccl_design/rst" type="logic" db_ref_id="1">
+         <obj_property name="ElementShortName">rst</obj_property>
+         <obj_property name="ObjectShortName">rst</obj_property>
+      </wvobject>
+      <wvobject fp_name="/simulate_your_ccl_design/wb_dat_o" type="array" db_ref_id="1">
+         <obj_property name="ElementShortName">wb_dat_o[31:0]</obj_property>
+         <obj_property name="ObjectShortName">wb_dat_o[31:0]</obj_property>
+         <obj_property name="Radix">HEXRADIX</obj_property>
+      </wvobject>
+      <wvobject fp_name="/simulate_your_ccl_design/wb_dat_o_dly" type="array" db_ref_id="1">
+         <obj_property name="ElementShortName">wb_dat_o_dly[31:0]</obj_property>
+         <obj_property name="ObjectShortName">wb_dat_o_dly[31:0]</obj_property>
+      </wvobject>
+      <wvobject fp_name="/simulate_your_ccl_design/wb_dat_i" type="array" db_ref_id="1">
+         <obj_property name="ElementShortName">wb_dat_i[31:0]</obj_property>
+         <obj_property name="ObjectShortName">wb_dat_i[31:0]</obj_property>
+         <obj_property name="Radix">HEXRADIX</obj_property>
+      </wvobject>
+      <wvobject fp_name="/simulate_your_ccl_design/wb_adr_i" type="array" db_ref_id="1">
+         <obj_property name="ElementShortName">wb_adr_i[31:0]</obj_property>
+         <obj_property name="ObjectShortName">wb_adr_i[31:0]</obj_property>
+         <obj_property name="Radix">HEXRADIX</obj_property>
+      </wvobject>
+      <wvobject fp_name="/simulate_your_ccl_design/wb_we_i" type="logic" db_ref_id="1">
+         <obj_property name="ElementShortName">wb_we_i</obj_property>
+         <obj_property name="ObjectShortName">wb_we_i</obj_property>
+      </wvobject>
+      <wvobject fp_name="/simulate_your_ccl_design/wb_cyc_i" type="logic" db_ref_id="1">
+         <obj_property name="ElementShortName">wb_cyc_i</obj_property>
+         <obj_property name="ObjectShortName">wb_cyc_i</obj_property>
+      </wvobject>
+      <wvobject fp_name="/simulate_your_ccl_design/wb_stb_i" type="logic" db_ref_id="1">
+         <obj_property name="ElementShortName">wb_stb_i</obj_property>
+         <obj_property name="ObjectShortName">wb_stb_i</obj_property>
+      </wvobject>
+      <wvobject fp_name="/simulate_your_ccl_design/wb_ack_o" type="logic" db_ref_id="1">
+         <obj_property name="ElementShortName">wb_ack_o</obj_property>
+         <obj_property name="ObjectShortName">wb_ack_o</obj_property>
+      </wvobject>
+      <wvobject fp_name="/simulate_your_ccl_design/buttons" type="array" db_ref_id="1">
+         <obj_property name="ElementShortName">buttons[3:0]</obj_property>
+         <obj_property name="ObjectShortName">buttons[3:0]</obj_property>
+         <obj_property name="Radix">HEXRADIX</obj_property>
+      </wvobject>
+      <wvobject fp_name="/simulate_your_ccl_design/leds" type="array" db_ref_id="1">
+         <obj_property name="ElementShortName">leds[3:0]</obj_property>
+         <obj_property name="ObjectShortName">leds[3:0]</obj_property>
+         <obj_property name="Radix">HEXRADIX</obj_property>
+      </wvobject>
+      <wvobject fp_name="/simulate_your_ccl_design/period" type="other" db_ref_id="1">
+         <obj_property name="ElementShortName">period</obj_property>
+         <obj_property name="ObjectShortName">period</obj_property>
+         <obj_property name="Radix">HEXRADIX</obj_property>
+      </wvobject>
+   </wvobject>
+   <wvobject fp_name="divider61" type="divider">
+      <obj_property name="label">Your Design Registers</obj_property>
+      <obj_property name="DisplayName">label</obj_property>
+      <obj_property name="BkColor">128 128 255</obj_property>
+      <obj_property name="TextColor">230 230 230</obj_property>
+   </wvobject>
+   <wvobject fp_name="group25" type="group">
+      <obj_property name="label">Your Design Registers</obj_property>
+      <obj_property name="DisplayName">label</obj_property>
+      <wvobject fp_name="/simulate_your_ccl_design/uut/register0_in" type="array" db_ref_id="1">
+         <obj_property name="ElementShortName">register0_in[31:0]</obj_property>
+         <obj_property name="ObjectShortName">register0_in[31:0]</obj_property>
+      </wvobject>
+      <wvobject fp_name="/simulate_your_ccl_design/uut/register0_out" type="array" db_ref_id="1">
+         <obj_property name="ElementShortName">register0_out[31:0]</obj_property>
+         <obj_property name="ObjectShortName">register0_out[31:0]</obj_property>
+      </wvobject>
+      <wvobject fp_name="/simulate_your_ccl_design/uut/register1_in" type="array" db_ref_id="1">
+         <obj_property name="ElementShortName">register1_in[31:0]</obj_property>
+         <obj_property name="ObjectShortName">register1_in[31:0]</obj_property>
+      </wvobject>
+      <wvobject fp_name="/simulate_your_ccl_design/uut/register1_out" type="array" db_ref_id="1">
+         <obj_property name="ElementShortName">register1_out[31:0]</obj_property>
+         <obj_property name="ObjectShortName">register1_out[31:0]</obj_property>
+      </wvobject>
+      <wvobject fp_name="/simulate_your_ccl_design/uut/register2_in" type="array" db_ref_id="1">
+         <obj_property name="ElementShortName">register2_in[31:0]</obj_property>
+         <obj_property name="ObjectShortName">register2_in[31:0]</obj_property>
+      </wvobject>
+      <wvobject fp_name="/simulate_your_ccl_design/uut/register2_out" type="array" db_ref_id="1">
+         <obj_property name="ElementShortName">register2_out[31:0]</obj_property>
+         <obj_property name="ObjectShortName">register2_out[31:0]</obj_property>
+      </wvobject>
+   </wvobject>
+   <wvobject fp_name="divider63" type="divider">
+      <obj_property name="label">Your Design External Pins</obj_property>
+      <obj_property name="DisplayName">label</obj_property>
+      <obj_property name="BkColor">128 128 255</obj_property>
+      <obj_property name="TextColor">230 230 230</obj_property>
+   </wvobject>
+   <wvobject fp_name="group26" type="group">
+      <obj_property name="label">Your External Pins</obj_property>
+      <obj_property name="DisplayName">label</obj_property>
+      <wvobject fp_name="/simulate_your_ccl_design/uut/buttons" type="array" db_ref_id="1">
+         <obj_property name="ElementShortName">buttons[3:0]</obj_property>
+         <obj_property name="ObjectShortName">buttons[3:0]</obj_property>
+      </wvobject>
+      <wvobject fp_name="/simulate_your_ccl_design/uut/leds" type="array" db_ref_id="1">
+         <obj_property name="ElementShortName">leds[3:0]</obj_property>
+         <obj_property name="ObjectShortName">leds[3:0]</obj_property>
+      </wvobject>
+   </wvobject>
+</wave_config>

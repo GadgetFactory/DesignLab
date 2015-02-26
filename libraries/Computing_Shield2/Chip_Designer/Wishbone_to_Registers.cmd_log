@@ -1,0 +1,1 @@
+vhdtdtfi -prj PSL_Papilio_DUO_LX9 -o D:/Dropbox/GadgetFactory/GadgetFactory_Engineering/Papilio-Schematic-Library/examples/Community_Core_Wishbone_Template/DUO_LX9/Wishbone_to_Registers.vhi -module Wishbone_to_Registers -template C:/Xilinx/14.7/ISE_DS/ISE//data/vhdlinst.tft -deleteonerror -lib work ../Wishbone_to_Registers.vhd 

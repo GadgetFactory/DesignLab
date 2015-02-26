@@ -19,14 +19,21 @@
 #include "SPI.h"
 
 //Uncomment for the SD card on the Papilio DUO Computing Shield
-#define circuit Computing_Shield
-#define CSPIN  16
+//#define circuit Computing_Shield
+//#define CSPIN  16
+//#define WISHBONESLOT 12
+
+//Uncomment for a SD card connected to the CL Wing Slot.
+#define circuit ZPUino_Wings
+#define CSPIN  WING_CL4
 #define WISHBONESLOT 12
 
 void setup()
 {
  // Open serial communications and wait for port to open:
   Serial.begin(9600); 
+  
+  delay(3000);
 
   Serial.print("Initializing SD card...");
 
@@ -55,7 +62,7 @@ void setup()
   }  
   // if the file isn't open, pop up an error:
   else {
-    Serial.println("error opening datalog.txt");
+    Serial.println("error opening test.txt");
   } 
 }
 

@@ -1,0 +1,1 @@
+sch2vhdl -intstyle ise -family spartan6 -tionly -w D:/Dropbox/GadgetFactory/GadgetFactory_Engineering/Papilio-Schematic-Library/examples/Community_Core_Wishbone_Template/Edit_Your_CCL_Design.sch Edit_Your_CCL_Design.vhi 
