@@ -40,16 +40,21 @@ Increase the memory address lines of Papilio DUO to support 2MB
 Disable POSIX interface for Papilio One boards to save memory.
 Allow new 2.0 libraries to specify the Wishbone slot using (Wishbone(1)).
 Full malloc() support.
+Lots of bug fixes.
 
 [ide]
 Merged in the Arduino 1.5.8 code.
 Serial ports are detected and labels are added to identify the type of board connected.
-Warn if people forget to synthezie bit files.
+Warn if people forget to synthesize bit files.
 Comment out #define circuit when saving a library.
+Papilio Loader upgraded to 2.7.
+Support adding a config.h file for project wide #defines.
+Lots of bug fixes.
 
 [DesignLab Libraries]
 New DMA VGA adapter with 16-bit color and dynamic resolution and uses AdaFruit_GFX library.
 PNG and JPG libraries for use with the new VGA adapter.
+ZLib compression library
 Dynamic PLL library.
 SD card library and examples.
 FatFS for use with POSIX names and VGA adapter.
