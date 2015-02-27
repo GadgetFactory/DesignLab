@@ -36,6 +36,9 @@ const struct product_type products[] = {
     { 0x08, 0x1A, "VGA (640x480) 15-bit Graphics Adaptor" },
     { 0x08, 0x1B, "VGA Text-mode (640x480) 80x30 3-bit Adaptor" },
     { 0x08, 0x1C, "ZX Spectrum Graphics Adaptor" },
+    { 0x08, 0x1D, "VGA Generic Interface (8/16-bit)" },
+    { 0x08, 0x1E, "PLL Clock Generator" },
+    { 0x08, 0x20, "RGB LED Controller" },
     { 0x02, 0x01, "YM2149 Sound Chip" },
     { 0x02, 0x02, "POKEY Sound Chip" },
     { 0x03, 0x01, "SID6581 Sound Chip" },
@@ -171,4 +174,3 @@ void loop()
 #endif
     showSystemInfo();
 }
-

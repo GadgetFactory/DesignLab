@@ -33,6 +33,47 @@ Processing and Wiring.
 
 Icon and about image designed by ToDo: http://www.todo.to.it/
 
+DesignLab 1.0.3 - 2015.02.27
+[zpuino]
+Enabled DMA channels
+Increase the memory address lines of Papilio DUO to support 2MB
+Disable POSIX interface for Papilio One boards to save memory.
+Allow new 2.0 libraries to specify the Wishbone slot using (Wishbone(1)).
+Full malloc() support.
+
+[ide]
+Merged in the Arduino 1.5.8 code.
+Serial ports are detected and labels are added to identify the type of board connected.
+Warn if people forget to synthezie bit files.
+Comment out #define circuit when saving a library.
+
+[DesignLab Libraries]
+New DMA VGA adapter with 16-bit color and dynamic resolution and uses AdaFruit_GFX library.
+PNG and JPG libraries for use with the new VGA adapter.
+Dynamic PLL library.
+SD card library and examples.
+FatFS for use with POSIX names and VGA adapter.
+Dual DeltaSigma DAC library.
+Basic Building Blocks library with Counters, bus taps, Dividers, etc.
+
+DesignLab 1.0.1 - 2015.01.22
+[zpuino]
+Fixed boards.txt file for the Hyperion variant.
+
+[DesignLab Libraries]
+Fixed the Arcade MegaWing pullups.
+
+DesignLab 1.0.0 - 2015.01.21
+[ide]
+*Fix symbols not closing properly.
+*Check for comments before #define circuit statements
+
+[designlab libraries]
+*Separate Arcade MegaWing and LogicStart MegaWing circuits to their own libraries.
+*Update Utility.sch with Papilio DUO IO connections.
+*Add ZPUino Hyperion variant for Papilio One 500K.
+*Added Pullups to the Arcade MegaWing Circuit.
+
 DesignLab 0.2.1 - 2015.01.01
 [ide]
 *Digitally signed the drivers for easy install in Windows 8
