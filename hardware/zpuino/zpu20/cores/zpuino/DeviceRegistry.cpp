@@ -6,8 +6,8 @@ namespace ZPUino {
     int DeviceRegistry::registerDevice(int slot) {
         if (slot>=MAX_SLOTS)
             return -2;
-/*         if (m_sDeviceRegistry & (1<<slot))
-            return -1; */
+        if (m_sDeviceRegistry & (1<<slot))
+            return -1;
         m_sDeviceRegistry |= (1<<slot);
         return 0;
     }
