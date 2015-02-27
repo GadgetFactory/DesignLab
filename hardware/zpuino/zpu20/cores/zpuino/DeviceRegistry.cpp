@@ -46,9 +46,10 @@ namespace ZPUino {
                 if (isRegistered(i))
                 {
 #ifdef DEBUG_DEVICEREGISTRY
-                printf("%s: skipping slot %d (already registered). Instance now %d.\r\n",__FUNCTION__,i,(int)instance-1);
+                    printf("%s: skipping slot %d (already registered). Instance now %d.\r\n",__FUNCTION__,i,(int)instance-1);
 #endif
-                    --instance;
+                    if (instance!=0xff)
+                        --instance;
                     continue;
                 }
 
