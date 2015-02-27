@@ -549,7 +549,7 @@
     <copy tofile="linux/work/hardware/tools/papilio/papilio_loader/papilio-prog" file="../hardware/tools/papilio/lin64/papilio-prog" overwrite="true" />
     <copy tofile="linux/work/hardware/tools/papilio/papilio_loader/gawk" file="../hardware/tools/papilio/lin64/gawk" overwrite="true" />
     <copy tofile="linux/work/lib/preferences.txt" file="linux/dist/lib/preferences-lin64.txt" overwrite="true" />
-	<copy tofile="linux/work/lib/preferences.txt" file="linux/dist/lib/preferences-lin64.txt" overwrite="true" />
+	<copy tofile="linux/work/lib/preferences.txt" file="linux/work/lib/preferences-lin64.txt" overwrite="true" />
     <chmod perm="755" file="linux/work/hardware/tools/papilio/papilio_loader/gawk" />	
     <chmod perm="755" file="linux/work/hardware/tools/papilio/papilio_loader/papilio-prog" /> 
     <!-- Unzip ARM tools -->
