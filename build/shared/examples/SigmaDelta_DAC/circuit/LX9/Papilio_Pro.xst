@@ -15,7 +15,7 @@ run
 -rtlview Yes
 -glob_opt AllClockNets
 -read_cores YES
--sd {"../../../libraries/AVR_Wishbone_Bridge" "../../../libraries/Benchy" "../../../libraries/BitCoin_Miner" "../../../libraries/Building_Blocks" "../../../libraries/Clocks" "../../../libraries/Gameduino" "../../../libraries/HQVGA" "../../../libraries/Papilio_Hardware" "../../../libraries/VGA_ZPUino" "../../../libraries/VGA_ZXSpectrum" "../../../libraries/ZPUino_2" "../../../libraries/ZPUino_Wishbone_Peripherals"  }
+-sd {"../../../../DesignLab/build/windows/work/libraries/AVR_Wishbone_Bridge" "../../../../DesignLab/build/windows/work/libraries/Benchy" "../../../libraries/AVR_Wishbone_Bridge" "../../../libraries/Benchy" "../../../libraries/BitCoin_Miner" "../../../libraries/Building_Blocks" "../../../libraries/Clocks" "../../../libraries/Gameduino" "../../../libraries/HQVGA" "../../../libraries/Papilio_Hardware" "../../../libraries/VGA_ZPUino" "../../../libraries/VGA_ZXSpectrum" "../../../libraries/ZPUino_2" "../../../libraries/ZPUino_Wishbone_Peripherals"  }
 -write_timing_constraints NO
 -cross_clock_analysis NO
 -hierarchy_separator /
