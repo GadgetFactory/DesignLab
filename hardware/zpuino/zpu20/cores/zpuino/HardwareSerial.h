@@ -51,6 +51,7 @@ public:
                             /* Register it */
                             char name[16];
                             sprintf(name,"serial%d",getInstance());
+                            lastCharCR=false;
                             serial_register_device(name,this);
                         }
 #endif
@@ -81,9 +82,9 @@ public:
 	virtual void flush(void);
 
 	size_t write(uint8_t c);
-
+#ifdef HAVE_ZFDEVICE
         size_t writeAndTranslate(const uint8_t *str, int size);
-
+#endif
 	virtual int peek() { return -1; }
 
         virtual void setBaudRate(unsigned baudrate)
@@ -97,6 +98,9 @@ public:
 
 	using Print::write; // pull in write(str) and write(buf, size) from Print
 private:
+#ifdef HAVE_ZFDEVICE
+    bool lastCharCR;
+#endif
 	unsigned int ioslot;
 };
 
