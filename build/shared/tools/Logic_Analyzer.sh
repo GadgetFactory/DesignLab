@@ -1,7 +1,7 @@
 #!/bin/bash
 
 # Simple check to see whether the "magic" Java binary is available on our path;
-java -version 1>/dev/null 2>&1
+../java/bin/java -version 1>/dev/null 2>&1
 if [ "$?" -ne "0" ]; then
 	echo It appears that Java is not installed on this computer. You
 	echo should download and install the latest JDK.
@@ -35,17 +35,17 @@ classpath="$basedir/ols-0.9.7/bin/*"
 MEMSETTINGS=-Xmx1024m
 
 if [[ "$OSTYPE" == "linux-gnu" ]]; then
-        java "$@" "$MEMSETTINGS" -Djna.nosys=true -Dnl.lxtreme.ols.bundle.dir="$plugindir" -DPlastic.defaultTheme=SkyBluer -cp "$classpath" nl.lxtreme.ols.runner.Runner
+        ../java/bin/java "$@" "$MEMSETTINGS" -Djna.nosys=true -Dnl.lxtreme.ols.bundle.dir="$plugindir" -DPlastic.defaultTheme=SkyBluer -cp "$classpath" nl.lxtreme.ols.runner.Runner
 elif [[ "$OSTYPE" == "darwin"* ]]; then
-        java "$@" "$MEMSETTINGS" -Djna.nosys=true -Dnl.lxtreme.ols.bundle.dir="$plugindir" -DPlastic.defaultTheme=SkyBluer -cp "$classpath" nl.lxtreme.ols.runner.Runner
+        ../java/bin/java "$@" "$MEMSETTINGS" -Djna.nosys=true -Dnl.lxtreme.ols.bundle.dir="$plugindir" -DPlastic.defaultTheme=SkyBluer -cp "$classpath" nl.lxtreme.ols.runner.Runner
 elif [[ "$OSTYPE" == "cygwin" ]]; then
-		java "$@" "$MEMSETTINGS" -Djna.nosys=true -Dnl.lxtreme.ols.bundle.dir="ols-0.9.7/plugins/" -DPlastic.defaultTheme=SkyBluer -cp ".;ols-0.9.7/bin/*" nl.lxtreme.ols.runner.Runner
+		../java/bin/java "$@" "$MEMSETTINGS" -Djna.nosys=true -Dnl.lxtreme.ols.bundle.dir="ols-0.9.7/plugins/" -DPlastic.defaultTheme=SkyBluer -cp ".;ols-0.9.7/bin/*" nl.lxtreme.ols.runner.Runner
 elif [[ "$OSTYPE" == "win32" ]]; then
-		java "$@" "$MEMSETTINGS" -Djna.nosys=true -Dnl.lxtreme.ols.bundle.dir="ols-0.9.7/plugins/" -DPlastic.defaultTheme=SkyBluer -cp ".;ols-0.9.7/bin/*" nl.lxtreme.ols.runner.Runner
+		../java/bin/java "$@" "$MEMSETTINGS" -Djna.nosys=true -Dnl.lxtreme.ols.bundle.dir="ols-0.9.7/plugins/" -DPlastic.defaultTheme=SkyBluer -cp ".;ols-0.9.7/bin/*" nl.lxtreme.ols.runner.Runner
 elif [[ "$OSTYPE" == "freebsd"* ]]; then
         echo No Freebsd support
 else
-        java "$@" "$MEMSETTINGS" -Djna.nosys=true -Dnl.lxtreme.ols.bundle.dir="$plugindir" -DPlastic.defaultTheme=SkyBluer -cp "$classpath" nl.lxtreme.ols.runner.Runner
+        ../java/bin/java "$@" "$MEMSETTINGS" -Djna.nosys=true -Dnl.lxtreme.ols.bundle.dir="$plugindir" -DPlastic.defaultTheme=SkyBluer -cp "$classpath" nl.lxtreme.ols.runner.Runner
 fi
 
  
