@@ -1,7 +1,12 @@
 #!/bin/bash
 
 # Simple check to see whether the "magic" Java binary is available on our path;
-../java/bin/java -version 1>/dev/null 2>&1
+if [[ "$OSTYPE" == "linux-gnu" ]]; then
+	java -version 1>/dev/null 2>&1
+else
+	../java/bin/java -version 1>/dev/null 2>&1
+fi
+
 if [ "$?" -ne "0" ]; then
 	echo It appears that Java is not installed on this computer. You
 	echo should download and install the latest JDK.
@@ -34,9 +39,9 @@ classpath="$basedir/ols-0.9.7/bin/*"
 
 echo Starting Papilio Loader
 if [[ "$OSTYPE" == "linux-gnu" ]]; then
-        ../java/bin/java -jar $basedir/Papilio_Loader/papilio-loader.jar
+        java -jar $basedir/Papilio_Loader/papilio-loader.jar
 elif [[ "$OSTYPE" == "darwin"* ]]; then
-        ../java/bin/java -jar $basedir/Papilio_Loader/papilio-loader.jar
+        java -jar $basedir/Papilio_Loader/papilio-loader.jar
 elif [[ "$OSTYPE" == "cygwin" ]]; then
         ../java/bin/java -jar Papilio_Loader/papilio-loader.jar
 elif [[ "$OSTYPE" == "win32" ]]; then
