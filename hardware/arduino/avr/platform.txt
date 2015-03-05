@@ -96,9 +96,13 @@ tools.avrdude.erase.pattern="{cmd.path}" "-C{config.path}" {erase.verbose} -p{bu
 tools.avrdude.duoisp.params.verbose=-v -v -v -v
 tools.avrdude.duoisp.params.quiet=-q -q
 tools.avrdude.duoisp.pattern="{runtime.ide.path}/hardware/tools/papilio/papilio_loader/bin/papilio-prog.exe" -f {runtime.ide.path}/hardware/arduino/avr/bootloaders/caterina/Papilio_DUO_ArduinoISP.bit
+tools.avrdude.duoisp.pattern.linux="{runtime.ide.path}/hardware/tools/papilio/papilio_loader/papilio-prog" -f {runtime.ide.path}/hardware/arduino/avr/bootloaders/caterina/Papilio_DUO_ArduinoISP.bit
 tools.avrdude.duoisp.pattern2="{cmd.path}" "-C{config.path}" {upload.verbose} -p{build.mcu} -c{protocol} {program.extra_params} "-Uflash:w:{build.path}/{build.project_name}.hex:i" -Ulock:w:{bootloader.lock_bits}:m
 tools.avrdude.duoisp.pattern3="{runtime.ide.path}/hardware/tools/papilio/papilio_loader/bin/papilio-prog.exe" -r
+tools.avrdude.duoisp.pattern3="{runtime.ide.path}/hardware/tools/papilio/papilio_loader/bin/papilio-prog.exe" -r
+tools.avrdude.duoisp.pattern3.linux="{runtime.ide.path}/hardware/tools/papilio/papilio_loader/papilio-prog" -r
 tools.avrdude.duoisp.pattern4="{runtime.ide.path}/hardware/tools/papilio/papilio_loader/bin/papilio-prog.exe" -c
+tools.avrdude.duoisp.pattern4.linux="{runtime.ide.path}/hardware/tools/papilio/papilio_loader/papilio-prog" -c
 
 tools.avrdude.bootloader.params.verbose=-v -v -v -v
 tools.avrdude.bootloader.params.quiet=-q -q
