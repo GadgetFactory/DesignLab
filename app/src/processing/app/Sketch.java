@@ -1699,7 +1699,11 @@ public class Sketch {
       throw new RunnerException(
           _("Not enough memory; see http://www.arduino.cc/en/Guide/Troubleshooting#size for tips on reducing your footprint."));
 
-    int warnDataPercentage = Integer.parseInt(prefs.get("build.warn_data_percentage"));
+    String prefWarn = prefs.get("build.warn_data_percentage");
+    int warnDataPercentage = 99;
+    if (null!=prefWarn) {
+      warnDataPercentage = Integer.parseInt(prefWarn);
+    }
     if (maxDataSize > 0 && dataSize > maxDataSize*warnDataPercentage/100)
       System.err.println(_("Low memory available, stability problems may occur."));
   }
