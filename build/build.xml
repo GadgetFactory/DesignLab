@@ -509,22 +509,27 @@
   <target name="linux32-build" depends="linux-build" description="Build linux (32-bit) version">
   
     <!-- Papilio tools -->
-    <copy todir="linux/work/hardware/tools/papilio" file="shared/tools/Papilio_Loader/programmer/linux32/cp" />
-    <chmod perm="755" file="linux/work/hardware/tools/papilio/cp" />
+    <copy todir="linux/work/hardware/tools/papilio/papilio_loader" file="shared/tools/Papilio_Loader/programmer/linux32/cp" />
+    <chmod perm="755" file="linux/work/hardware/tools/papilio/papilio_loader/cp" />
+	<chmod perm="755" file="linux/work/tools/Papilio_Loader/programmer/linux32/cp" />
 
-    <copy todir="linux/work/hardware/tools/papilio" file="shared/tools/Papilio_Loader/programmer/linux32/gawk" />
-    <chmod perm="755" file="linux/work/hardware/tools/papilio/gawk" />
+    <copy todir="linux/work/hardware/tools/papilio/papilio_loader" file="shared/tools/Papilio_Loader/programmer/linux32/gawk" />
+    <chmod perm="755" file="linux/work/hardware/tools/papilio/papilio_loader/gawk" />
+	<chmod perm="755" file="linux/work/tools/Papilio_Loader/programmer/linux32/gawk" />
 
-    <copy todir="linux/work/hardware/tools/papilio" file="shared/tools/Papilio_Loader/programmer/linux32/srec_cat" />
-    <chmod perm="755" file="linux/work/hardware/tools/papilio/srec_cat" />
+    <copy todir="linux/work/hardware/tools/papilio/papilio_loader" file="shared/tools/Papilio_Loader/programmer/linux32/srec_cat" />
+    <chmod perm="755" file="linux/work/hardware/tools/papilio/papilio_loader/srec_cat" />
+	<chmod perm="755" file="linux/work/tools/Papilio_Loader/programmer/linux32/srec_cat" />
 
-    <copy todir="linux/work/hardware/tools/papilio" file="shared/tools/Papilio_Loader/programmer/linux32/data2mem" />
-    <chmod perm="755" file="linux/work/hardware/tools/papilio/data2mem" />
+    <copy todir="linux/work/hardware/tools/papilio/papilio_loader" file="shared/tools/Papilio_Loader/programmer/linux32/data2mem" />
+    <chmod perm="755" file="linux/work/hardware/tools/papilio/papilio_loader/data2mem" />
+	<chmod perm="755" file="linux/work/tools/Papilio_Loader/programmer/linux32/data2mem" />
 
-    <copy todir="linux/work/hardware/tools/papilio" file="shared/tools/Papilio_Loader/programmer/linux32/papilio-prog" />
-    <chmod perm="755" file="linux/work/hardware/tools/papilio/papilio-prog" />
+    <copy todir="linux/work/hardware/tools/papilio/papilio_loader" file="shared/tools/Papilio_Loader/programmer/linux32/papilio-prog" />
+    <chmod perm="755" file="linux/work/hardware/tools/papilio/papilio_loader/papilio-prog" />
+	<chmod perm="755" file="linux/work/tools/Papilio_Loader/programmer/linux32/papilio-prog" />
 
-    <copy todir="linux/work/hardware/tools/papilio" file="shared/tools/Papilio_Loader/programmer/linux32/libsrecord.so.0" />
+    <copy todir="linux/work/hardware/tools/papilio/papilio_loader" file="shared/tools/Papilio_Loader/programmer/linux32/libsrecord.so.0" />
 
     <copy todir="linux/work/hardware/tools/avr/utils/bin" file="shared/tools/Papilio_Loader/programmer/linux32/make" />
     <chmod perm="755" file="linux/work/hardware/tools/avr/utils/bin/make" />  
