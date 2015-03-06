@@ -33,6 +33,13 @@ Processing and Wiring.
 
 Icon and about image designed by ToDo: http://www.todo.to.it/
 
+DesignLab 1.0.4 - 2015.03.06
+[zpuino]
+Fix newline's in the STDIO library
+
+[ide]
+Numerous bug fixes, particularly for Linux.
+
 DesignLab 1.0.3 - 2015.02.27
 [zpuino]
 Enabled DMA channels
