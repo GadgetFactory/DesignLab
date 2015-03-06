@@ -26,9 +26,9 @@ duo.build.mcu=atmega32u4
 duo.build.f_cpu=16000000L
 duo.vid.0=0x1d50
 duo.pid.0=0x60a4
-duo.name.0=Papilio DUO AVR
-duo.vid.1=0x1d50
-duo.pid.1=0x60a5
+duo.name.0=Papilio DUO AVR Bootloader
+#duo.vid.1=0x1d50
+#duo.pid.1=0x60a5
 duo.build.vid=0x1d50
 duo.build.pid=0x60a5
 duo.build.usb_product="Papilio DUO AVR Serial Port"
@@ -52,13 +52,16 @@ duo.bit.file=circuit/DUO_LX9/papilio_duo_lx9.bit
 duoisp.name=Papilio DUO - AVR - No USB - ISP
 duoisp.upload.tool=avrdude
 duoisp.upload.protocol=duoisp
-duoisp.communication=serial
-duoisp.protocol=stk500v1
-duoisp.program.extra_params=-P{serial.port} -b{upload.speed}
 duoisp.upload.maximum_size=32768
+duoisp.upload.maximum_data_size=2560
+duoisp.upload.size_sections=all
 duoisp.upload.speed=57600
 duoisp.upload.disable_flushing=true
 duoisp.upload.use_1200bps_touch=false
+
+duoisp.communication=serial
+duoisp.protocol=stk500v1
+duoisp.program.extra_params=-P{serial.port} -b{upload.speed}
 
 duoisp.program.tool=duoisp
 
@@ -67,17 +70,25 @@ duoisp.bootloader.low_fuses=0xff
 duoisp.bootloader.high_fuses=0x97
 #duoisp.bootloader.high_fuses=0xd8 #Without JTAG enabled
 duoisp.bootloader.extended_fuses=0xcb
-duoisp.bootloader.file=caterina/Caterina-Papilio-duo.hex
+#duoisp.bootloader.file=caterina/Caterina-Papilio-DUO.hex
 duoisp.bootloader.unlock_bits=0x3F
 duoisp.bootloader.lock_bits=0x2F
 
 duoisp.build.mcu=atmega32u4
 duoisp.build.f_cpu=16000000L
+duoisp.vid.0=0x1d50
+duoisp.pid.0=0x60a5
+duoisp.name.0=Papilio DUO AVR
+#duoisp.vid.1=0x1d50
+#duoisp.pid.1=0x60a4
 duoisp.build.vid=0x1d50
 duoisp.build.pid=0x60a5
+duoisp.build.usb_product="Papilio DUO AVR Serial Port"
+duoisp.build.board=AVR_DUO
 duoisp.build.core=arduino
 duoisp.build.variant=papilioDUO
-duoisp.build.extra_flags=-DUSB_VID={build.vid} -DUSB_PID={build.pid}
+duoisp.build.extra_flags={build.usb_flags}
+
 
 duoisp.bitloader.tool=papilioprog
 duoisp.bitloader.file=lx9/zpuino-1.0-PapilioPro-S6LX9-Vanilla-1.0.bit
