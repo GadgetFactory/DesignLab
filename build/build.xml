@@ -470,28 +470,8 @@
     <copy todir="linux/work" file="linux/dist/DesignLab" />
     <chmod perm="755" file="linux/work/DesignLab" />
 
-    <copy todir="linux/work" file="../hardware/tools/papilio/papilio_loader/ftdi_user.sh" />
-    <chmod perm="755" file="linux/work/ftdi_user.sh" />
-
-    <copy todir="linux/work/hardware/tools/papilio" file="../hardware/tools/papilio/lin32/cp" />
-    <chmod perm="755" file="linux/work/hardware/tools/papilio/cp" />
-
-    <copy todir="linux/work/hardware/tools/papilio" file="../hardware/tools/papilio/lin32/gawk" />
-    <chmod perm="755" file="linux/work/hardware/tools/papilio/gawk" />
-
-    <copy todir="linux/work/hardware/tools/papilio" file="../hardware/tools/papilio/lin32/srec_cat" />
-    <chmod perm="755" file="linux/work/hardware/tools/papilio/srec_cat" />
-
-    <copy todir="linux/work/hardware/tools/papilio" file="../hardware/tools/papilio/lin32/data2mem" />
-    <chmod perm="755" file="linux/work/hardware/tools/papilio/data2mem" />
-
-    <copy todir="linux/work/hardware/tools/papilio" file="../hardware/tools/papilio/lin32/papilio-prog" />
-    <chmod perm="755" file="linux/work/hardware/tools/papilio/papilio-prog" />
-
-    <copy todir="linux/work/hardware/tools/papilio" file="../hardware/tools/papilio/lin32/libsrecord.so.0" />
-
-    <copy todir="linux/work/hardware/tools/avr/utils/bin" file="../hardware/tools/papilio/lin32/make" />
-    <chmod perm="755" file="linux/work/hardware/tools/avr/utils/bin/make" />
+    <copy todir="linux/work" file="linux/ubuntu-setup.sh" />
+    <chmod perm="755" file="linux/work/ubuntu-setup.sh" />
 
     <mkdir dir="linux/work/hardware/tools" />
     <copy file="linux/dist/tools/adk2install" todir="linux/work/hardware/tools" />
@@ -506,12 +486,12 @@
 
     <chmod perm="755" file="linux/work/hardware/tools/papilio/papilio_loader/Papilio_Programmer.sh" />
     <chmod perm="755" file="linux/work/hardware/tools/papilio/papilio_loader/papilio_programmer_linux.sh" />
-    <chmod perm="755" file="linux/work/hardware/tools/papilio/papilio_loader/papilio-prog" />
+<!--     <chmod perm="755" file="linux/work/hardware/tools/papilio/papilio_loader/papilio-prog" />
     <chmod perm="755" file="linux/work/hardware/tools/papilio/papilio_loader/gawk" />
     <chmod perm="755" file="linux/work/hardware/tools/papilio/lin32/gawk" />
     <chmod perm="755" file="linux/work/hardware/tools/papilio/lin32/srec_cat" />
     <chmod perm="755" file="linux/work/hardware/tools/papilio/lin32/data2mem" />
-    <chmod perm="755" file="linux/work/hardware/tools/papilio/lin32/papilio-prog" />
+    <chmod perm="755" file="linux/work/hardware/tools/papilio/lin32/papilio-prog" /> -->
 
 
 
@@ -527,6 +507,28 @@
   </target>
 
   <target name="linux32-build" depends="linux-build" description="Build linux (32-bit) version">
+  
+    <!-- Papilio tools -->
+    <copy todir="linux/work/hardware/tools/papilio" file="shared/tools/Papilio_Loader/programmer/linux32/cp" />
+    <chmod perm="755" file="linux/work/hardware/tools/papilio/cp" />
+
+    <copy todir="linux/work/hardware/tools/papilio" file="shared/tools/Papilio_Loader/programmer/linux32/gawk" />
+    <chmod perm="755" file="linux/work/hardware/tools/papilio/gawk" />
+
+    <copy todir="linux/work/hardware/tools/papilio" file="shared/tools/Papilio_Loader/programmer/linux32/srec_cat" />
+    <chmod perm="755" file="linux/work/hardware/tools/papilio/srec_cat" />
+
+    <copy todir="linux/work/hardware/tools/papilio" file="shared/tools/Papilio_Loader/programmer/linux32/data2mem" />
+    <chmod perm="755" file="linux/work/hardware/tools/papilio/data2mem" />
+
+    <copy todir="linux/work/hardware/tools/papilio" file="shared/tools/Papilio_Loader/programmer/linux32/papilio-prog" />
+    <chmod perm="755" file="linux/work/hardware/tools/papilio/papilio-prog" />
+
+    <copy todir="linux/work/hardware/tools/papilio" file="shared/tools/Papilio_Loader/programmer/linux32/libsrecord.so.0" />
+
+    <copy todir="linux/work/hardware/tools/avr/utils/bin" file="shared/tools/Papilio_Loader/programmer/linux32/make" />
+    <chmod perm="755" file="linux/work/hardware/tools/avr/utils/bin/make" />  
+  
     <!-- Unzip ARM tools -->
     <antcall target="unzip-arm-toolchain">
       <param name="dist_file" value="gcc-arm-none-eabi-4.8.3-2014q1-linux32.tar.gz" />
@@ -546,12 +548,30 @@
   </target>
 
   <target name="linux64-build" depends="linux-build" description="Build linux (64-bit) version">
-    <copy tofile="linux/work/hardware/tools/papilio/papilio_loader/papilio-prog" file="../hardware/tools/papilio/lin64/papilio-prog" overwrite="true" />
-    <copy tofile="linux/work/hardware/tools/papilio/papilio_loader/gawk" file="../hardware/tools/papilio/lin64/gawk" overwrite="true" />
+  
+    <!-- Papilio tools -->
+    <copy todir="linux/work/hardware/tools/papilio" file="shared/tools/Papilio_Loader/programmer/linux64/cp" />
+    <chmod perm="755" file="linux/work/hardware/tools/papilio/cp" />
+
+    <copy todir="linux/work/hardware/tools/papilio" file="shared/tools/Papilio_Loader/programmer/linux64/gawk" />
+    <chmod perm="755" file="linux/work/hardware/tools/papilio/gawk" />
+
+    <copy todir="linux/work/hardware/tools/papilio" file="shared/tools/Papilio_Loader/programmer/linux64/srec_cat" />
+    <chmod perm="755" file="linux/work/hardware/tools/papilio/srec_cat" />
+
+    <copy todir="linux/work/hardware/tools/papilio" file="shared/tools/Papilio_Loader/programmer/linux64/data2mem" />
+    <chmod perm="755" file="linux/work/hardware/tools/papilio/data2mem" />
+
+    <copy todir="linux/work/hardware/tools/papilio" file="shared/tools/Papilio_Loader/programmer/linux64/papilio-prog" />
+    <chmod perm="755" file="linux/work/hardware/tools/papilio/papilio-prog" />
+
+    <copy todir="linux/work/hardware/tools/papilio" file="shared/tools/Papilio_Loader/programmer/linux64/libsrecord.so.0" />
+
+    <copy todir="linux/work/hardware/tools/avr/utils/bin" file="shared/tools/Papilio_Loader/programmer/linux64/make" />
+    <chmod perm="755" file="linux/work/hardware/tools/avr/utils/bin/make" />    
+  
     <copy tofile="linux/work/lib/preferences.txt" file="linux/work/lib/preferences-lin64.txt" overwrite="true" />
-	<copy tofile="linux/work/lib/preferences.txt" file="linux/work/lib/preferences-lin64.txt" overwrite="true" />
-    <chmod perm="755" file="linux/work/hardware/tools/papilio/papilio_loader/gawk" />	
-    <chmod perm="755" file="linux/work/hardware/tools/papilio/papilio_loader/papilio-prog" /> 
+
     <!-- Unzip ARM tools -->
     <antcall target="unzip-tool">
       <param name="dist_file" value="gcc-arm-none-eabi-4.8.3-2014q1-linux64.tar.gz" />
@@ -571,11 +591,11 @@
   </target>
 
   <target name="linux32-run" depends="linux32-build" description="Run Linux (32-bit) version">
-    <exec executable="./linux/work/zpuino" spawn="false"/>
+    <exec executable="./linux/work/DesignLab" spawn="false"/>
   </target>
 
   <target name="linux64-run" depends="linux64-build" description="Run Linux (64-bit) version">
-    <exec executable="./linux/work/zpuino" spawn="false"/>
+    <exec executable="./linux/work/DesignLab" spawn="false"/>
   </target>
 
   <target name="unzip-avr-toolchain">
@@ -819,6 +839,9 @@
       <fileset file="windows/work/hardware/tools/bossac.exe" />
       <fileset file="windows/work/hardware/tools/listComPorts.exe" />
     </chmod>
+	
+    <copy todir="windows/work/hardware/tools/papilio/papilio_loader/bin" file="shared/tools/Papilio_Loader/programmer/win32/papilio-prog.exe" />
+    <chmod perm="755" file="windows/work/hardware/tools/papilio/papilio_loader/bin/papilio-prog.exe" />	
 
     <antcall target="assemble">
       <param name="target.path" value="windows/work" />
