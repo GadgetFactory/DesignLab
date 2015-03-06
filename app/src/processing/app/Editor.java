@@ -217,8 +217,9 @@ public class Editor extends JFrame implements RunnerListener {
           
           if (saveAtStart == true)
           {
-            Base.activeEditor.handleSaveAs();
             saveAtStart = false;
+            if (Base.activeEditor.handleSaveAs() == false)
+              return;
             //Base.updateXilinxProject(Base.activeEditor);
       			if (renameSymbol == true) {
       				//Base.showMessage("title", "Renaming Symbol Lib");
