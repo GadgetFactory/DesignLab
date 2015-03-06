@@ -557,12 +557,12 @@
     <!-- Papilio tools -->
 	
 	
-	<copy todir="linux/work/tools/Papilio_Loader/programmer/linux32" file="shared/tools/Papilio_Loader/programmer/linux64/cp" />
+	<copy todir="linux/work/tools/Papilio_Loader/programmer/linux32" file="shared/tools/Papilio_Loader/programmer/linux64/cp"  overwrite="true" />
     <copy todir="linux/work/hardware/tools/papilio/papilio_loader" file="shared/tools/Papilio_Loader/programmer/linux64/cp" />
     <chmod perm="755" file="linux/work/hardware/tools/papilio/papilio_loader/cp" />
 	<chmod perm="755" file="linux/work/tools/Papilio_Loader/programmer/linux32/cp" />
 
-	<copy todir="linux/work/tools/Papilio_Loader/programmer/linux32" file="shared/tools/Papilio_Loader/programmer/linux64/gawk" />
+	<copy todir="linux/work/tools/Papilio_Loader/programmer/linux32" file="shared/tools/Papilio_Loader/programmer/linux64/gawk"  overwrite="true" />
     <copy todir="linux/work/hardware/tools/papilio/papilio_loader" file="shared/tools/Papilio_Loader/programmer/linux64/gawk" />
     <chmod perm="755" file="linux/work/hardware/tools/papilio/papilio_loader/gawk" />
 	<chmod perm="755" file="linux/work/tools/Papilio_Loader/programmer/linux32/gawk" />
@@ -575,7 +575,7 @@
     <chmod perm="755" file="linux/work/hardware/tools/papilio/papilio_loader/data2mem" />
 	<chmod perm="755" file="linux/work/tools/Papilio_Loader/programmer/linux32/data2mem" /> -->
 
-	<copy todir="linux/work/tools/Papilio_Loader/programmer/linux32" file="shared/tools/Papilio_Loader/programmer/linux64/papilio-prog" />
+	<copy todir="linux/work/tools/Papilio_Loader/programmer/linux32" file="shared/tools/Papilio_Loader/programmer/linux64/papilio-prog"  overwrite="true" />
     <copy todir="linux/work/hardware/tools/papilio/papilio_loader" file="shared/tools/Papilio_Loader/programmer/linux64/papilio-prog" />
     <chmod perm="755" file="linux/work/hardware/tools/papilio/papilio_loader/papilio-prog" />
 	<chmod perm="755" file="linux/work/tools/Papilio_Loader/programmer/linux32/papilio-prog" />
