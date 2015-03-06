@@ -8,8 +8,6 @@ echo $SUDO_USER
 usermod -a -G dialout $SUDO_USER
 apt-get install libftdi-dev gawk
 chgrp dialout hardware/tools/papilio/papilio_loader/papilio-prog
-chgrp dialout hardware/tools/papilio/papilio-prog
-chgrp dialout hardware/tools/papilio/lin32/papilio-prog
 chgrp dialout tools/Papilio_Loader/programmer/linux32/papilio-prog
 echo 'SUBSYSTEMS=="usb", ATTRS{idVendor}=="0403", ATTRS{idProduct}=="6010", GROUP="dialout"' > /etc/udev/rules.d/papilio.rules
 echo 'SUBSYSTEMS=="usb", ATTRS{idVendor}=="0403", ATTRS{idProduct}=="7bc0", GROUP="dialout"' >> /etc/udev/rules.d/papilio.rules
