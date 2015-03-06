@@ -32,29 +32,28 @@ void HardwareSerial::setPins(TX tx, RX rx)
     inputPinForFunction( rx, ppspin );
 }
 
-size_t HardwareSerial::writeAndTranslate(const uint8_t *str, int size)
-{
-    size_t s = 0;
-    while (size--) {
-        if ((*str)=='\n') {
-            while ((REG(1) & 2)==2);
-            REG(0) = '\r';
-        }
-        while ((REG(1) & 2)==2);
-	REG(0) = *str;
-        s++;
-        str++;
-    }
-    return s;
-}
-
-
 #ifdef HAVE_ZFDEVICE
 
 /* ZPUino File Device support */
 
+size_t HardwareSerial::writeAndTranslate(const uint8_t *str, int size)
+{
+    size_t s = size;
+    while (size--) {
+        uint8_t outputchar = *str++;
+        if (outputchar=='\n') {
+            if (!lastCharCR)
+                write('\r');
+        }
+        write(outputchar);
+        lastCharCR=(outputchar=='\r');
+    }
+    return size;
+}
+
 static ssize_t zf_serial_read(void *ptr, void *dest, size_t size)
 {
+    // TODO.
     return -1;
 }
 static ssize_t zf_serial_write(void *ptr, const void *src, size_t size)
