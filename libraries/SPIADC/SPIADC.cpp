@@ -6,8 +6,8 @@ void SPIADC::begin(CS SEL, WISHBONESLOT wishboneSlot, ADCBITS bits)
  SPI_ADC_CS   = SEL;
  adcBits = bits;
 
- //SPI.begin(MOSI(WA14),MISO(WA13),SCK(WA15));
- SPI.begin(wishboneSlot);
+ //SPI.begin(WishboneSlot(wishboneSlot_));
+ SPI.begin();
 
  pinMode            (SPI_ADC_CS , OUTPUT);
  digitalWrite       (SPI_ADC_CS , HIGH);
