@@ -1,0 +1,3 @@
+[submodule "DesignLab_Examples"]
+	path = DesignLab_Examples
+	url = https://github.com/GadgetFactory/DesignLab_Examples.git

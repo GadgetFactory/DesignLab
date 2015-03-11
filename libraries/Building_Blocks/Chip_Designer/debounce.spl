@@ -1,7 +1,0 @@
-[Inputs]
-reset
-clk_32Mhz
-button_in
-[Outputs]
-debounced_button
-[BiDir]

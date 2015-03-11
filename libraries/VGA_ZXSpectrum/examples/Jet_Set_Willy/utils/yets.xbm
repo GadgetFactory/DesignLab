@@ -1,4 +1,0 @@
-#define yets_width 16
-#define yets_height 16
-static unsigned char yets_bits[] = {
-00,00,00,00,2a,ffffffaa,7f,ffffffff,7f,ffffffff,7c,3f,7c,3f,7f,ffffffff,00,00,2a,ffffffaa,7f,ffffffff,7f,ffffffff,7c,3f,7c,3f,7f,ffffffff,7f,ffffffff,};

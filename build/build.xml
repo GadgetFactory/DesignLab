@@ -113,15 +113,15 @@
 		<arg value="pull"/>
 	</exec>		
 	
-	<delete dir="../libraries" />
-	<delete dir="shared/examples" />
-    <copy todir="../libraries">
+<!-- 	<delete dir="../libraries" />
+	<delete dir="shared/examples" /> -->
+    <copy todir="${target.path}/libraries">
       <fileset dir="../DesignLab_Examples/libraries" />
     </copy>		  
-    <copy todir="shared/examples">
+    <copy todir="${target.path}/examples">
       <fileset dir="../DesignLab_Examples" />
     </copy>		
-	<delete dir="shared/examples/libraries" />
+	<delete dir="${target.path}/examples/libraries" />
 
     <!-- copy shared tools folder -->
     <copy todir="${target.path}/tools">
@@ -129,9 +129,9 @@
     </copy>
 
     <!-- copy library folder -->
-    <copy todir="${target.path}/libraries">
+<!--     <copy todir="${target.path}/libraries">
       <fileset dir="../libraries" />
-    </copy>
+    </copy> -->
 
     <!-- copy hardware folder -->
     <copy todir="${target.path}/hardware">
@@ -146,9 +146,9 @@
     </copy>
 
     <!-- copy shared examples folder -->
-    <copy todir="${target.path}/examples">
+<!--     <copy todir="${target.path}/examples">
       <fileset dir="shared/examples" />
-    </copy>
+    </copy> -->
 
     <!-- Unzip documentation -->
     <unzip dest="${target.path}" src="shared/reference.zip" overwrite="false"/>

@@ -1,3 +1,0 @@
-vhdl work "../Wishbone_to_Registers.vhd"
-vhdl work "../Wishbone_Symbol_Example.vhd"
-vhdl work "../wishbone_testbench.vhd"

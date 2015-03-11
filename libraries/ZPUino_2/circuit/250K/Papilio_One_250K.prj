@@ -1,5 +1,0 @@
-vhdl DesignLab "../../pad.vhd"
-vhdl DesignLab "../../ZPUino_Papilio_One_250K_V2.vhd"
-vhdl DesignLab "../../Wing_GPIO.vhd"
-vhdl DesignLab "../../Papilio_Default_Wing_Pinout.vhd"
-vhdl work "Papilio_One_250K.vhf"

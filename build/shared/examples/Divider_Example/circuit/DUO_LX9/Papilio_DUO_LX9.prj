@@ -1,2 +1,0 @@
-vhdl DesignLab "../../../libraries/Building_Blocks/clk_divider.vhd"
-vhdl work "Papilio_DUO_LX9.vhf"
