@@ -107,6 +107,21 @@
   <target name="assemble">
     <fail unless="target.path"
 	  message="Do not call assemble from the command line." />
+	  
+	<!-- Update the DesignLab_Examples submodule -->
+	<exec executable="git" dir="../DesignLab_Examples" spawn="false">
+		<arg value="pull"/>
+	</exec>		
+	
+	<delete dir="../libraries" />
+	<delete dir="shared/examples" />
+    <copy todir="../libraries">
+      <fileset dir="../DesignLab_Examples/libraries" />
+    </copy>		  
+    <copy todir="shared/examples">
+      <fileset dir="../DesignLab_Examples" />
+    </copy>		
+	<delete dir="shared/examples/libraries" />
 
     <!-- copy shared tools folder -->
     <copy todir="${target.path}/tools">
