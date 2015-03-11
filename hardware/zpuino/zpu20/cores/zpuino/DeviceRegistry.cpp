@@ -11,13 +11,13 @@ namespace ZPUino {
 #endif
             return -2;
         }
-        if (m_sDeviceRegistry & (1<<slot)) {
+/*         if (m_sDeviceRegistry & (1<<slot)) {
 #ifdef DEBUG_DEVICEREGISTRY
             printf("%s: cannot register device on slot %d: already registered\r\n",__FUNCTION__,slot);
 #endif
 
             return -1;
-        }
+        } */
         m_sDeviceRegistry |= (1<<slot);
 #ifdef DEBUG_DEVICEREGISTRY
         printf("%s: registrer mask is now 0x%08x\r\n",__FUNCTION__,m_sDeviceRegistry);
