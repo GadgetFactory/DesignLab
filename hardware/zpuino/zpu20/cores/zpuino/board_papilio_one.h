@@ -137,4 +137,113 @@
 #define WING_C_14 FPGA_PIN_P16
 #define WING_C_15 FPGA_PIN_P17
 
+//Wing 1 Column A
+#define WA0 0
+#define WA1 1
+#define WA2 2
+#define WA3 3
+#define WA4 4
+#define WA5 5
+#define WA6 6
+#define WA7 7
+#define WA8 8
+#define WA9 9
+#define WA10 10
+#define WA11 11
+#define WA12 12
+#define WA13 13
+#define WA14 14
+#define WA15 15
+
+//Wing 1 Column B
+#define WB0 16    //This doesn't work for some reason!
+#define WB1 17
+#define WB2 18
+#define WB3 19
+#define WB4 20
+#define WB5 21
+#define WB6 22
+#define WB7 23
+#define WB8 24
+#define WB9 25
+#define WB10 26
+#define WB11 27
+#define WB12 28
+#define WB13 29
+#define WB14 30
+#define WB15 31
+
+//Wing 2 Column C
+#define WC0 32
+#define WC1 33
+#define WC2 34
+#define WC3 35
+#define WC4 36
+#define WC5 37
+#define WC6 38
+#define WC7 39
+#define WC8 40
+#define WC9 41
+#define WC10 42
+#define WC11 43
+#define WC12 44
+#define WC13 45
+#define WC14 46
+#define WC15 47
+
+// ******** Define AH/AL syntax
+//Wing 1 Column A
+#define WAL0 0
+#define WAL1 1
+#define WAL2 2
+#define WAL3 3
+#define WAL4 4
+#define WAL5 5
+#define WAL6 6
+#define WAL7 7
+#define WAH0 8
+#define WAH1 9
+#define WAH2 10
+#define WAH3 11
+#define WAH4 12
+#define WAH5 13
+#define WAH6 14
+#define WAH7 15
+
+//Wing 1 Column B
+#define WBL0 16    //This doesn't work for some reason!
+#define WBL1 17
+#define WBL2 18
+#define WBL3 19
+#define WBL4 20
+#define WBL5 21
+#define WBL6 22
+#define WBL7 23
+#define WBH0 24
+#define WBH1 25
+#define WBH2 26
+#define WBH3 27
+#define WBH4 28
+#define WBH5 29
+#define WBH6 30
+#define WBH7 31
+
+//Wing 2 Column C
+#define WCL0 32
+#define WCL1 33
+#define WCL2 34
+#define WCL3 35
+#define WCL4 36
+#define WCL5 37
+#define WCL6 38
+#define WCL7 39
+#define WCH0 40
+#define WCH1 41
+#define WCH2 42
+#define WCH3 43
+#define WCH4 44
+#define WCH5 45
+#define WCH6 46
+#define WCH7 47
+
 #endif
