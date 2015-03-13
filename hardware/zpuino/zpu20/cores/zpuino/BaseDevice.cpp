@@ -46,10 +46,6 @@ namespace ZPUino {
             m_slot=0xff;
             return -1;
         }
-        if (DeviceRegistry::registerDevice(slot)<0) {
-            m_slot=0xff;
-            return -1;
-        }
 
         m_slot=slot;
         m_baseaddress = (register_t)IO_SLOT(m_slot);
