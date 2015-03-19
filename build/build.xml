@@ -121,6 +121,8 @@
 	
 	<exec executable="git" dir="../DesignLab_Examples" spawn="false">
 		<arg value="pull"/>
+		<arg value="origin"/>
+		<arg value="master"/>
 	</exec>		
 	
 <!-- 	<delete dir="../libraries" />
@@ -1004,6 +1006,7 @@
 
   <target name="clean" description="Perform a spring cleaning"
 	  depends="linux-clean, windows-clean, macosx-clean, subprojects-clean">
+	  <delete dir="../DesignLab_Examples" />
   </target>
 
 </project>
