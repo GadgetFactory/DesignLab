@@ -109,6 +109,16 @@
 	  message="Do not call assemble from the command line." />
 	  
 	<!-- Update the DesignLab_Examples submodule -->
+	<exec executable="git" spawn="false">
+		<arg value="submodule"/>
+		<arg value="init"/>
+	</exec>		
+
+	<exec executable="git" spawn="false">
+		<arg value="submodule"/>
+		<arg value="update"/>
+	</exec>		
+	
 	<exec executable="git" dir="../DesignLab_Examples" spawn="false">
 		<arg value="pull"/>
 	</exec>		
