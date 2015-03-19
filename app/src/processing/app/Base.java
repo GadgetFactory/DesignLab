@@ -3154,7 +3154,7 @@ public class Base {
 	static public void renameSymbolLibrary(String currentName, String newName) {
 		Base.replaceFileContents(Base.getActiveSketchPath() + "\\Wishbone_Symbol_Example.sym", Base.getActiveSketchPath() + "\\" + newName + ".sym", currentName, newName);
 		Base.replaceFileContents(Base.getActiveSketchPath() + "\\Wishbone_Symbol_Example.vhd", Base.getActiveSketchPath() + "\\" + newName + ".vhd", currentName, newName);
-		Base.replaceFileContents(Base.getActiveSketchPath() + "\\Edit_Your_Chip_Design.sch", Base.getActiveSketchPath() + "\\Edit_Your_Chip_Design.sch", currentName, newName);
+		Base.replaceFileContents(Base.getActiveSketchPath() + "\\Chip_Designer\\Edit_Your_Chip_Design.sch", Base.getActiveSketchPath() + "\\Chip_Designer\\Edit_Your_Chip_Design.sch", currentName, newName);
 		Base.replaceFileContents(Base.getActiveSketchPath() + "\\Chip_Designer\\Simulate_Your_Chip_Design.vhd", Base.getActiveSketchPath() + "\\Chip_Designer\\Simulate_Your_Chip_Design.vhd", currentName, newName);
 		
 		Base.replaceFileContents(Base.getActiveSketchPath() + "\\keywords.txt", Base.getActiveSketchPath() + "\\keywords.txt", currentName, newName);		
