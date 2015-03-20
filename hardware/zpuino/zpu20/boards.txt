@@ -33,8 +33,8 @@ zpuino_papilio_one500.build.mcu=zpu
 zpuino_papilio_one500.build.ldscript=zpuelf.lds
 zpuino_papilio_one500.build.pins=standard
 zpuino_papilio_one500.build.toolchain=zpu
-zpuino_papilio_one500.build.board=ZPUINO_PAPILIO_ONE_HYPERION
-zpuino_papilio_one500.build.extra_flags=-DNOPOSIX -DZPULOWMEM -D__ZPUINO_PAPILIO_ONE_HYPERION__ -DBOARD_ID=0xB4010F00 -DBOARD_MEMORYSIZE=0x8000 -D__S3E_500__ -nostartfiles
+zpuino_papilio_one500.build.board=ZPUINO_PAPILIO_ONE_500K
+zpuino_papilio_one500.build.extra_flags=-DNOPOSIX -DZPULOWMEM -D__ZPUINO_PAPILIO_ONE_500K__ -DBOARD_ID=0xB4010F00 -DBOARD_MEMORYSIZE=0x8000 -D__S3E_500__ -nostartfiles
 zpuino_papilio_one500.build.extraSflags=-DBOARD_ID=0xB4010F00
 zpuino_papilio_one500.bitloader.tool=papilioprog
 zpuino_papilio_one500.bitloader.file=p1_500k/zpuino-1.0-PapilioOne-S3E500-Vanilla-1.0.bit
@@ -55,8 +55,8 @@ zpuino_papilio_one500vps.build.core=zpuino
 zpuino_papilio_one500vps.build.mcu=zpu
 zpuino_papilio_one500vps.build.pins=standard
 zpuino_papilio_one500vps.build.toolchain=zpu
-zpuino_papilio_one500vps.build.board=ZPUINO_PAPILIO_ONE_500K
-zpuino_papilio_one500vps.build.extra_flags=-DNOPOSIX -DZPULOWMEM -D__ZPUINO_PAPILIO_ONE_500K__ -DCLK_FREQ=92000000 -DBOARD_ID=0xb4010f00 -DBOARD_MEMORYSIZE=0x4000 -D__S3E_500__ -nostartfiles
+zpuino_papilio_one500vps.build.board=ZPUINO_PAPILIO_ONE_HYPERION
+zpuino_papilio_one500vps.build.extra_flags=-DNOPOSIX -DZPULOWMEM -D__ZPUINO_PAPILIO_ONE_HYPERION__ -DCLK_FREQ=92000000 -DBOARD_ID=0xb4010f00 -DBOARD_MEMORYSIZE=0x4000 -D__S3E_500__ -nostartfiles
 zpuino_papilio_one500vps.build.extraSflags=-DBOARD_ID=0xb4010f00 
 zpuino_papilio_one500vps.bitloader.tool=papilioprog
 zpuino_papilio_one500vps.bitloader.file=p1_500k/zpuino-1.0-PapilioOne-S3E500-Hyperion-HQVGA-PinSelect.bit
