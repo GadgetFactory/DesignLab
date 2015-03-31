@@ -235,16 +235,17 @@ public class Editor extends JFrame implements RunnerListener {
         		    Base.activeEditor.sketch.getCode(0).saveAs(newFile);
                 exampleFolder.renameTo(new File(Base.getActiveSketchPath() + "/examples/" + sketchName));
         		    oldFile.delete();
+        		    Base.activeEditor.internalCloseRunner();
         		    Base.activeEditor.handleOpenUnchecked(newFile,
         		                               0,
-        		                               Base.activeEditor.getSelectionStart(),
-        		                               Base.activeEditor.getSelectionStop(),
-        		                               Base.activeEditor.getScrollPosition());
+        		                               0,
+        		                               0,
+        		                               0);
       				} catch (IOException ie) { }
-      				Base.activeEditor.base.rebuildSketchbookMenus();
-              Base.activeEditor.base.onBoardOrPortChange();
-              Base.activeEditor.base.rebuildImportMenu(Base.activeEditor.importMenu);
-              Base.activeEditor.base.rebuildExamplesMenu(Base.activeEditor.examplesMenu);
+//      				Base.activeEditor.base.rebuildSketchbookMenus();
+//              Base.activeEditor.base.onBoardOrPortChange();
+//              Base.activeEditor.base.rebuildImportMenu(Base.activeEditor.importMenu);
+//              Base.activeEditor.base.rebuildExamplesMenu(Base.activeEditor.examplesMenu);
 //              try {
 //                File tmp = new File(Base.getActiveSketchPath() + "/examples/" + sketchName + "/" + sketchName + ".ino");
 //                base.handleOpen(tmp);
