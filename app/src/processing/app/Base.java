@@ -3154,6 +3154,7 @@ public class Base {
 	static public void renameSymbolLibrary(String currentName, String newName) {
 		Base.replaceFileContents(Base.getActiveSketchPath() + "\\Wishbone_Symbol_Example.sym", Base.getActiveSketchPath() + "\\" + newName + ".sym", currentName, newName);
 		Base.replaceFileContents(Base.getActiveSketchPath() + "\\Wishbone_Symbol_Example.vhd", Base.getActiveSketchPath() + "\\" + newName + ".vhd", currentName, newName);
+		Base.replaceFileContents(Base.getActiveSketchPath() + "\\Wishbone_Symbol_Example.sch", Base.getActiveSketchPath() + "\\" + newName + ".sch", currentName, newName);
 		Base.replaceFileContents(Base.getActiveSketchPath() + "\\Chip_Designer\\Edit_Your_Chip_Design.sch", Base.getActiveSketchPath() + "\\Chip_Designer\\Edit_Your_Chip_Design.sch", currentName, newName);
 		Base.replaceFileContents(Base.getActiveSketchPath() + "\\Chip_Designer\\Simulate_Your_Chip_Design.vhd", Base.getActiveSketchPath() + "\\Chip_Designer\\Simulate_Your_Chip_Design.vhd", currentName, newName);
 		
@@ -3414,7 +3415,15 @@ public class Base {
                       bw.write("\t<file xil_pn:name=\"" + libFileName.getAbsolutePath() + "\" xil_pn:type=\"FILE_EDIF\">\n");
                       bw.write("\t<association xil_pn:name=\"Implementation\" xil_pn:seqID=\"0\"/>\n");
                       bw.write("\t</file>\n");
-                    }                     
+                    }     
+                    if (libFileName.getName().toLowerCase().endsWith(".sch")) { 
+                      if (!libFileName.getName().contains("Edit_Your_Chip_Design")){
+                        bw.write("\t<file xil_pn:name=\"" + libFileName.getAbsolutePath() + "\" xil_pn:type=\"FILE_SCHEMATIC\">\n");
+                        bw.write("\t<association xil_pn:name=\"BehavioralSimulation\" xil_pn:seqID=\"154\"/>\n");
+                        bw.write("\t<association xil_pn:name=\"Implementation\" xil_pn:seqID=\"0\"/>\n");
+                        bw.write("\t</file>\n");
+                      }
+                    }                       
                     if (libFileName.getName().toLowerCase().endsWith(".v")) { 
                       bw.write("\t<file xil_pn:name=\"" + libFileName.getAbsolutePath() + "\" xil_pn:type=\"FILE_VERILOG\">\n");
                       bw.write("\t<association xil_pn:name=\"Implementation\" xil_pn:seqID=\"0\"/>\n");

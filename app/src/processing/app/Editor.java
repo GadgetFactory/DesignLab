@@ -245,10 +245,10 @@ public class Editor extends JFrame implements RunnerListener {
               Base.activeEditor.base.onBoardOrPortChange();
               Base.activeEditor.base.rebuildImportMenu(Base.activeEditor.importMenu);
               Base.activeEditor.base.rebuildExamplesMenu(Base.activeEditor.examplesMenu);
-              try {
-                File tmp = new File(Base.getActiveSketchPath() + "/examples/" + sketchName + "/" + sketchName + ".ino");
-                base.handleOpen(tmp);
-              } catch (Exception ie) { }
+//              try {
+//                File tmp = new File(Base.getActiveSketchPath() + "/examples/" + sketchName + "/" + sketchName + ".ino");
+//                base.handleOpen(tmp);
+//              } catch (Exception ie) { }
       			}
           }
           
