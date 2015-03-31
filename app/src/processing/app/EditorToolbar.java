@@ -44,17 +44,17 @@ public class EditorToolbar extends JComponent implements MouseInputListener, Key
 
   /** Rollover titles for each button. */
   static final String title[] = {
-    _("Verify"), _("Upload"), _("New"), _("Open"), _("Save"), _("Serial Monitor"), _("Logic Analyzer"), _("Papilio Loader"), _("Virtual Instruments") , _("New Papilio Project"), _("Load Circuit"), _("View Circuit"), _("Edit Circuit")
+    _("Verify"), _("Upload"), _("TOC"), _("Open"), _("Save"), _("Serial Monitor"), _("Logic Analyzer"), _("Papilio Loader"), _("Virtual Instruments") , _("New ZPUino SOC Project"), _("Load Circuit"), _("View Circuit"), _("Edit Circuit")
   };
 
   /** Titles for each button when the shift key is pressed. */ 
   static final String titleShift[] = {
-    _("Verify"), _("Upload Using Programmer"), _("New Editor Window"), _("Open in Another Window"), _("Save"), _("Serial Monitor")
+    _("Verify"), _("Upload Using Programmer"), _("New TOC Window"), _("Open in Another Window"), _("Save"), _("Serial Monitor")
   };
 
     /** Titles for each button when the control key is pressed. */
   static final String titleControl[] = {
-    "Verify", "Upload To Memory", "New", "Open", "Save", "Serial Monitor"
+    "Verify", "Upload To Memory", "TOC", "Open", "Save", "Serial Monitor"
   };
 
   static final int BUTTON_COUNT  = title.length;
@@ -414,9 +414,9 @@ public class EditorToolbar extends JComponent implements MouseInputListener, Key
     case NEW_PROJECT:
       try {
         String pslPath = Base.getExamplesPath();
-        File f1 = new File(pslPath+"/Template_PSL_Base/Template_PSL_Base.ino");    
+        File f1 = new File(pslPath+"/New_ZPUino_SOC/New_ZPUino_SOC.ino");    
         Editor newproj = Base.activeEditor.base.handleOpen(f1);
-        newproj.handlesaveAtStart(false);   
+        //newproj.handlesaveAtStart(false);   
       } catch (Exception e1) {
         e1.printStackTrace();
       }

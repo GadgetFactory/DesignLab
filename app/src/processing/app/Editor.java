@@ -570,14 +570,14 @@ public class Editor extends JFrame implements RunnerListener {
 //      });
 //    fileMenu.add(item);
     
-    item = newJMenuItem(_("New Papilio Project"), 'N');
+    item = newJMenuItem(_("New ZPUino SOC Project"), 'N');
     item.addActionListener(new ActionListener() {
         public void actionPerformed(ActionEvent e) {
           try {
             String pslPath = Base.getExamplesPath();
-            File f1 = new File(pslPath+"/Template_PSL_Base/Template_PSL_Base.ino");    
+            File f1 = new File(pslPath+"/New_ZPUino_SOC/New_ZPUino_SOC.ino");    
             Editor newproj = base.handleOpen(f1);
-            newproj.handlesaveAtStart(false);
+            //newproj.handlesaveAtStart(false);
           } catch (Exception e1) {
             e1.printStackTrace();
           }
