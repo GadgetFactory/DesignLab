@@ -20,6 +20,11 @@ Facebook: http://www.facebook.com/PapilioPlatform
 Twitter: http://www.twitter.com/gadgetfactory
 
 CHANGELOG
+4/1/2015 Version 2.8
+	Papilio GUO
+		-Fix for SPI Flash not programming correctly in simple mode.
+		-Change the Operations buttons to check boxes.
+		
 2/24/2015 Version 2.7
 	Papilio GUI
 		-Add Board Name field so you can manually specify the board name.
