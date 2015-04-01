@@ -33,6 +33,15 @@ Processing and Wiring.
 
 Icon and about image designed by ToDo: http://www.todo.to.it/
 
+DesignLab 1.0.5 - 2015.04.01
+[ide]
+Upgrade to Papilio Loader 2.8
+New Project types added to File and the toolbar icon. (CTL and shift for other types)
+Multiple New Library types added. (Standalone library, Wishbone Schematic Library, Wishbone VHDL Library)
+
+[DesignLab Libraries]
+New modes for Alvaro's VGA adapter. RGB332 with resolution of 1024x768 on Papilio DUO now supported.
+
 DesignLab 1.0.4 - 2015.03.06
 [zpuino]
 Fix newline's in the STDIO library
