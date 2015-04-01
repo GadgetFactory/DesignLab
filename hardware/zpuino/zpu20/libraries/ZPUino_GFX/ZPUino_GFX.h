@@ -44,6 +44,8 @@ public:
     ZPUino_GFX_class(): Adafruit_GFX_core<PixelType>() {
     }
 
+    typedef PixelType PixType;
+
     void begin(const modeline_t *mode = &modeline_640x480_60);
 
     PixelType *getFramebuffer() {
@@ -115,7 +117,7 @@ public:
     void clearArea(int sx, int sy, int w, int h, uint16_t color)
     {
         unsigned delta = Adafruit_GFX_core<PixelType>::width()-w;
-        uint16_t *dest = getFramebuffer();
+        PixelType *dest = getFramebuffer();
         dest+=sx+(sy*Adafruit_GFX_core<PixelType>::width());
         while (h--) {
             int z = w;
