@@ -570,7 +570,22 @@ public class Editor extends JFrame implements RunnerListener {
 //      });
 //    fileMenu.add(item);
     
-    item = newJMenuItem(_("New ZPUino SOC Project"), 'N');
+    item = newJMenuItem(_("New FPGA Circuit Project"), 'N');
+    item.addActionListener(new ActionListener() {
+        public void actionPerformed(ActionEvent e) {
+          try {
+            String pslPath = Base.getExamplesPath();
+            File f1 = new File(pslPath+"/New_Blank_Circuit/New_Blank_Circuit.ino");    
+            Editor newproj = base.handleOpen(f1);
+            //newproj.handlesaveAtStart(false);
+          } catch (Exception e1) {
+            e1.printStackTrace();
+          }
+        }
+      });
+    fileMenu.add(item);     
+    
+    item = newJMenuItem(_("New ZPUino SOC Project"), 'Z');
     item.addActionListener(new ActionListener() {
         public void actionPerformed(ActionEvent e) {
           try {
@@ -699,27 +714,42 @@ public class Editor extends JFrame implements RunnerListener {
     JMenuItem item;
     papilioMenu = new JMenu(_("Papilio"));
 
-     item = new JMenuItem(_("New Papilio Project"));
-     item.addActionListener(new ActionListener() {
-         public void actionPerformed(ActionEvent e) {
-           try {
-             String pslPath = Base.getExamplesPath();
-             File f1 = new File(pslPath+"/Template_PSL_Base/Template_PSL_Base.ino");    
-             Editor newproj = base.handleOpen(f1);
-             newproj.handlesaveAtStart(false);
-           } catch (Exception e1) {
-             e1.printStackTrace();
-           }
-         }
-       });
-     papilioMenu.add(item);  
+//     item = new JMenuItem(_("New Papilio Project"));
+//     item.addActionListener(new ActionListener() {
+//         public void actionPerformed(ActionEvent e) {
+//           try {
+//             String pslPath = Base.getExamplesPath();
+//             File f1 = new File(pslPath+"/Template_PSL_Base/Template_PSL_Base.ino");    
+//             Editor newproj = base.handleOpen(f1);
+//             newproj.handlesaveAtStart(false);
+//           } catch (Exception e1) {
+//             e1.printStackTrace();
+//           }
+//         }
+//       });
+//     papilioMenu.add(item);  
 	 
-     item = new JMenuItem(_("New DesignLab Library"));
+    item = new JMenuItem(_("New DesignLab Library - Stand Alone Schematic"));
+    item.addActionListener(new ActionListener() {
+        public void actionPerformed(ActionEvent e) {
+          try {
+            String pslPath = Base.getExamplesPath();
+            File f1 = new File(pslPath+"/Template_DesignLab_Library/edit_library.ino");
+            Editor newproj = base.handleOpen(f1);
+            newproj.handlesaveAtStart(true);
+          } catch (Exception e1) {
+            e1.printStackTrace();
+          }
+        }
+      });
+    papilioMenu.add(item);    
+    
+     item = new JMenuItem(_("New DesignLab Library - Wishbone Schematic"));
      item.addActionListener(new ActionListener() {
          public void actionPerformed(ActionEvent e) {
            try {
              String pslPath = Base.getExamplesPath();
-             File f1 = new File(pslPath+"/Template_DesignLab_Library/edit_library.ino");
+             File f1 = new File(pslPath+"/Template_DesignLab_Library_Wishbone_Schematic/edit_library.ino");
              Editor newproj = base.handleOpen(f1);
              newproj.handlesaveAtStart(true);
            } catch (Exception e1) {
@@ -727,7 +757,22 @@ public class Editor extends JFrame implements RunnerListener {
            }
          }
        });
-     papilioMenu.add(item); 	
+     papilioMenu.add(item); 
+     
+     item = new JMenuItem(_("New DesignLab Library - Wishbone VHDL"));
+     item.addActionListener(new ActionListener() {
+         public void actionPerformed(ActionEvent e) {
+           try {
+             String pslPath = Base.getExamplesPath();
+             File f1 = new File(pslPath+"/Template_DesignLab_Library_Wishbone_VHDL/edit_library.ino");
+             Editor newproj = base.handleOpen(f1);
+             newproj.handlesaveAtStart(true);
+           } catch (Exception e1) {
+             e1.printStackTrace();
+           }
+         }
+       });
+     papilioMenu.add(item);     
      
 //     item = new JMenuItem(_("Edit Library"));
 //     item.addActionListener(new ActionListener() {
@@ -803,10 +848,18 @@ public class Editor extends JFrame implements RunnerListener {
     item = new JMenuItem(_("Getting Started"));
     item.addActionListener(new ActionListener() {
         public void actionPerformed(ActionEvent e) {
-          Base.openURL(_("http://gadgetfactory.net/learn/2013/10/29/papilio-schematic-library-getting-started/"));
+          Base.openURL(_("http://gadgetfactory.net/learn/2015/01/14/designlab-quickstart-duo-fpga/"));
         }
       });
     papilioMenu.add(item);
+    
+    item = new JMenuItem(_("DesignLab Basics"));
+    item.addActionListener(new ActionListener() {
+        public void actionPerformed(ActionEvent e) {
+          Base.openURL(_("http://gadgetfactory.net/learn/2015/03/30/designlab-basics/"));
+        }
+      });
+    papilioMenu.add(item);     
 
     item = new JMenuItem(_("Common Problems"));
     item.addActionListener(new ActionListener() {
