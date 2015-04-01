@@ -3152,27 +3152,27 @@ public class Base {
   }
   
 	static public void renameSymbolLibrary(String currentName, String newName) {
-		Base.replaceFileContents(Base.getActiveSketchPath() + "\\Wishbone_Symbol_Example.sym", Base.getActiveSketchPath() + "\\" + newName + ".sym", currentName, newName);
-		Base.replaceFileContents(Base.getActiveSketchPath() + "\\Wishbone_Symbol_Example.vhd", Base.getActiveSketchPath() + "\\" + newName + ".vhd", currentName, newName);
-		Base.replaceFileContents(Base.getActiveSketchPath() + "\\Wishbone_Symbol_Example.sch", Base.getActiveSketchPath() + "\\" + newName + ".sch", currentName, newName);
-		Base.replaceFileContents(Base.getActiveSketchPath() + "\\Wishbone_Symbol_Example_wrapper.vhd", Base.getActiveSketchPath() + "\\" + newName + "_wrapper.vhd", currentName, newName);
-		Base.replaceFileContents(Base.getActiveSketchPath() + "\\Chip_Designer\\Edit_Your_Chip_Design.sch", Base.getActiveSketchPath() + "\\Chip_Designer\\Edit_Your_Chip_Design.sch", currentName, newName);
-		Base.replaceFileContents(Base.getActiveSketchPath() + "\\Chip_Designer\\Simulate_Your_Chip_Design.vhd", Base.getActiveSketchPath() + "\\Chip_Designer\\Simulate_Your_Chip_Design.vhd", currentName, newName);
+		Base.replaceFileContents(Base.getActiveSketchPath() + "/Wishbone_Symbol_Example.sym", Base.getActiveSketchPath() + "/" + newName + ".sym", currentName, newName);
+		Base.replaceFileContents(Base.getActiveSketchPath() + "/Wishbone_Symbol_Example.vhd", Base.getActiveSketchPath() + "/" + newName + ".vhd", currentName, newName);
+		Base.replaceFileContents(Base.getActiveSketchPath() + "/Wishbone_Symbol_Example.sch", Base.getActiveSketchPath() + "/" + newName + ".sch", currentName, newName);
+		Base.replaceFileContents(Base.getActiveSketchPath() + "/Wishbone_Symbol_Example_wrapper.vhd", Base.getActiveSketchPath() + "/" + newName + "_wrapper.vhd", currentName, newName);
+		Base.replaceFileContents(Base.getActiveSketchPath() + "/Chip_Designer/Edit_Your_Chip_Design.sch", Base.getActiveSketchPath() + "/Chip_Designer/Edit_Your_Chip_Design.sch", currentName, newName);
+		Base.replaceFileContents(Base.getActiveSketchPath() + "/Chip_Designer/Simulate_Your_Chip_Design.vhd", Base.getActiveSketchPath() + "/Chip_Designer/Simulate_Your_Chip_Design.vhd", currentName, newName);
 		
-		Base.replaceFileContents(Base.getActiveSketchPath() + "\\keywords.txt", Base.getActiveSketchPath() + "\\keywords.txt", currentName, newName);		
-		Base.replaceFileContents(Base.getActiveSketchPath() + "\\Wishbone_Symbol_Example.cpp", Base.getActiveSketchPath() + "\\" + newName + ".cpp", currentName, newName);
-		Base.replaceFileContents(Base.getActiveSketchPath() + "\\Wishbone_Symbol_Example.h", Base.getActiveSketchPath() + "\\" + newName + ".h", currentName, newName);
+		Base.replaceFileContents(Base.getActiveSketchPath() + "/keywords.txt", Base.getActiveSketchPath() + "/keywords.txt", currentName, newName);		
+		Base.replaceFileContents(Base.getActiveSketchPath() + "/Wishbone_Symbol_Example.cpp", Base.getActiveSketchPath() + "/" + newName + ".cpp", currentName, newName);
+		Base.replaceFileContents(Base.getActiveSketchPath() + "/Wishbone_Symbol_Example.h", Base.getActiveSketchPath() + "/" + newName + ".h", currentName, newName);
 		
-		Base.replaceFileContents(Base.getActiveSketchPath() + "\\Chip_Designer.xise", Base.getActiveSketchPath() + "\\Chip_Designer.xise", currentName, newName);
+		Base.replaceFileContents(Base.getActiveSketchPath() + "/Chip_Designer.xise", Base.getActiveSketchPath() + "/Chip_Designer.xise", currentName, newName);
 
     //TODO Should just do this for all *.sch files JPG
-    Base.replaceFileContents(Base.getActiveSketchPath() + "\\circuit\\Papilio_DUO_LX9.sch", Base.getActiveSketchPath() + "\\circuit\\Papilio_DUO_LX9.sch", currentName, newName);
-    Base.replaceFileContents(Base.getActiveSketchPath() + "\\circuit\\Papilio_One_250K.sch", Base.getActiveSketchPath() + "\\circuit\\Papilio_One_250K.sch", currentName, newName);
-    Base.replaceFileContents(Base.getActiveSketchPath() + "\\circuit\\Papilio_One_500K.sch", Base.getActiveSketchPath() + "\\circuit\\Papilio_One_500K.sch", currentName, newName);
-    Base.replaceFileContents(Base.getActiveSketchPath() + "\\circuit\\Papilio_Pro.sch", Base.getActiveSketchPath() + "\\circuit\\Papilio_Pro.sch", currentName, newName);
+    Base.replaceFileContents(Base.getActiveSketchPath() + "/circuit/Papilio_DUO_LX9.sch", Base.getActiveSketchPath() + "/circuit/Papilio_DUO_LX9.sch", currentName, newName);
+    Base.replaceFileContents(Base.getActiveSketchPath() + "/circuit/Papilio_One_250K.sch", Base.getActiveSketchPath() + "/circuit/Papilio_One_250K.sch", currentName, newName);
+    Base.replaceFileContents(Base.getActiveSketchPath() + "/circuit/Papilio_One_500K.sch", Base.getActiveSketchPath() + "/circuit/Papilio_One_500K.sch", currentName, newName);
+    Base.replaceFileContents(Base.getActiveSketchPath() + "/circuit/Papilio_Pro.sch", Base.getActiveSketchPath() + "/circuit/Papilio_Pro.sch", currentName, newName);
 		
 		
-		Base.replaceFileContents(Base.getActiveSketchPath() + "\\examples\\Template_DesignLab_Library\\Template_DesignLab_Library.ino", Base.getActiveSketchPath() + "\\examples\\Template_DesignLab_Library\\" + newName + ".ino", currentName, newName);
+		Base.replaceFileContents(Base.getActiveSketchPath() + "/examples/Template_DesignLab_Library/Template_DesignLab_Library.ino", Base.getActiveSketchPath() + "/examples/Template_DesignLab_Library/" + newName + ".ino", currentName, newName);
 	}
 
 	static public void replaceFileContents(String fileName, String newFileName, String toReplace, String replaceWith) {
