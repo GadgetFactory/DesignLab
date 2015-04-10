@@ -92,5 +92,6 @@ class Adafruit_GFX_core : public Print {
 };
 
 typedef Adafruit_GFX_core<uint16_t> Adafruit_GFX;
+typedef Adafruit_GFX_core<uint32_t> Adafruit_GFX_32;
 
 #endif // _ADAFRUIT_GFX_H
