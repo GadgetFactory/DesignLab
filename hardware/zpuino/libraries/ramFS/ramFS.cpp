@@ -15,7 +15,7 @@
 #include <fcntl.h>
 #include <unistd.h>
 #include <endian.h>
-#include <stdio.h>
+#include "zstdio.h"
 #include <new.h>
 
 #define BE32(x) be32toh(x)
