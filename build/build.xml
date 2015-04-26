@@ -584,8 +584,8 @@
     <!-- Papilio tools -->
 	
 	
-	<copy todir="linux/work/tools/Papilio_Loader/programmer/linux32" file="shared/tools/Papilio_Loader/programmer/linux64/cp"  overwrite="true" />
-    <copy todir="linux/work/hardware/tools/papilio/papilio_loader" file="shared/tools/Papilio_Loader/programmer/linux64/cp" />
+	<copy todir="linux/work/tools/Papilio_Loader/programmer/linux32" file="shared/tools/Papilio_Loader/programmer/linux32/cp"  overwrite="true" />
+    <copy todir="linux/work/hardware/tools/papilio/papilio_loader" file="shared/tools/Papilio_Loader/programmer/linux64/papilio-prog" />
     <chmod perm="755" file="linux/work/hardware/tools/papilio/papilio_loader/cp" />
 	<chmod perm="755" file="linux/work/tools/Papilio_Loader/programmer/linux32/cp" />
 
