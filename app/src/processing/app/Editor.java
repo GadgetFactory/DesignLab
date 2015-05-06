@@ -585,7 +585,7 @@ public class Editor extends JFrame implements RunnerListener {
       });
     fileMenu.add(item);     
     
-    item = newJMenuItem(_("New ZPUino SOC Project"), 'Z');
+    item = newJMenuItemShift(_("New ZPUino SOC Project"), 'N');
     item.addActionListener(new ActionListener() {
         public void actionPerformed(ActionEvent e) {
           try {
