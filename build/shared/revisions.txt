@@ -1,3 +1,15 @@
+DesignLab 1.0.6 - 2015.05.13
+[ide]
+Fix CTL-Z opening a new ZPUino project instead of undo edit.
+
+[DesignLab Libraries]
+	-Servo library works for ZPUino and AVR now.
+	-I2C schematic symbol and library added.
+	-WiiChuck example added, using I2C.
+	-Robot Control Library - PWM and Quadrature Decoder working.
+	-RetroCade Synth is updated and completely working with ZPUino 2.0 now.
+	-PS/2 library added for AVR and ZPUino. Mouse and keyboard support.
+
 DesignLab 1.0.5 - 2015.04.01
 [ide]
 Upgrade to Papilio Loader 2.8
