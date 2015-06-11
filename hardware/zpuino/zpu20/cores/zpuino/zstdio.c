@@ -242,8 +242,9 @@ FILE *fdopen(int fd, const char *mode)
 
 int fseek(FILE *stream, long offset, int whence)
 {
-    UNIMPLEMENTED();
-    return -1;
+    if (!stream || stream->fd<0)
+        return -1;
+    return lseek(stream->fd,offset,whence);
 }
 long ftell(FILE *stream)
 {
