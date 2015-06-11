@@ -57,15 +57,19 @@
  * timer16_Sequence_t enumerates the sequence that the timers should be allocated
  * _Nbr_16timers indicates how many 16 bit timers are available.
  */
-
+ 
 // Architecture specific include
 #if defined(ARDUINO_ARCH_AVR)
 #include "avr/ServoTimers.h"
 #elif defined(ARDUINO_ARCH_SAM)
 #include "sam/ServoTimers.h"
+#elif defined(ZPU)
+#include "zpu20/ServoTimers.h"
 #else
 #error "This library only supports boards with an AVR or SAM processor."
 #endif
+
+
 
 #define Servo_VERSION           2     // software version of this library
 
