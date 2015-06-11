@@ -391,12 +391,19 @@ static ssize_t zf_smallfs_read(void *ptr, void *dest, size_t size)
     return f->read(dest, size);
 }
 
+static ssize_t zf_smallfs_seek(void *ptr, int pos, int whence)
+{
+    SmallFSFile *f = static_cast<SmallFSFile*>(ptr);
+    return f->seek(pos, whence);
+}
+
 static struct zfops zf_smallfs_ops = {
     &zf_smallfs_open,
     NULL,
     &zf_smallfs_read,
     NULL,
-    NULL,
+    &zf_smallfs_seek,
+    NULL
 };
 
 void zf_register_smallfs()
