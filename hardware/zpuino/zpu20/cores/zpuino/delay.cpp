@@ -12,9 +12,21 @@ void delayCycles(unsigned int cycles)
 	while (TIMERTSC<next) {}
 }
 
+static unsigned lastMillis = 0;
+static unsigned addMillis = 0;
+
 unsigned int millis(void) {
-    return TIMERTSC / clocksPerMilisecond;
+    unsigned currentMillis= TIMERTSC / clocksPerMilisecond;
+    if (currentMillis<lastMillis) {
+        addMillis+=44739;
+    }
+    lastMillis = currentMillis;
+    return addMillis + currentMillis;
 }
+
+/* unsigned int millis(void) {
+    return TIMERTSC / clocksPerMilisecond;
+} */
 unsigned int micros(void) {
     return TIMERTSC / clocksPerMicrosecond;
 }
