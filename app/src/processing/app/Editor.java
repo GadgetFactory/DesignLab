@@ -850,6 +850,7 @@ public class Editor extends JFrame implements RunnerListener {
             
             String laLocation = Base.getToolsPath() + "/" + prefs.get("logicanalyzer.file");
             Base.openURL("file://" + laLocation);
+            Base.showMessage("LA Configuration", prefs.get("logicanalyzer.message"));
           }
           Base.openURL(_("tools://Logic_Analyzer.sh"));
         }

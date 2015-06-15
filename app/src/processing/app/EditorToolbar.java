@@ -411,6 +411,7 @@ public class EditorToolbar extends JComponent implements MouseInputListener, Key
         
         String laLocation = Base.getToolsPath() + "/" + prefs.get("logicanalyzer.file");
         Base.openURL("file://" + laLocation);
+        Base.showMessage("LA Configuration", prefs.get("logicanalyzer.message"));
       }
       Base.openURL(_("tools://Logic_Analyzer.sh"));
       break;
