@@ -474,25 +474,34 @@ public class EditorToolbar extends JComponent implements MouseInputListener, Key
       File fileXise = getLibraryFile("#define\\s+circuit", "xise.file");
       if (fileXise.exists()){
         //Base.openURL("file://" + fileXise.toString());
-        if (fileXise.toString().startsWith(Base.getActiveSketchPath()))
-          Base.openURL("file://" + fileXise.toString());
-        else {
-            Base.showMessage("Library File", "This is a library circuit, it cannot be edited directly. Please save to a new location to edit.");
-            Base.activeEditor.handleSaveAs();
-            try {
-              Base.copyDir(fileXise.getParentFile(), new File(Base.getActiveSketchPath()+"/circuit") );
-            } catch (IOException ie) { }
-            String text = editor.getText();
-            String pattern = "#define\\s+circuit\\s+";
-            Pattern r = Pattern.compile(pattern, Pattern.CASE_INSENSITIVE);
-            Matcher m = r.matcher(text);
-            if (m.find()) {
-              String newText = m.replaceAll("//#define circuit ");
-              editor.setText(newText);
-              editor.handleSave(false);
-            }
-            //Base.showMessage("Saved", "Don't forget to remove the \"#define circuit\" statement before editing the circuit.");
-        }
+
+        if(Base.activeEditor.handleSave(true)) {
+          if (fileXise.toString().startsWith(Base.getActiveSketchPath()))
+            Base.openURL("file://" + fileXise.toString());
+          else {
+              if (Base.showYesNoQuestion(Base.activeEditor, "Copy Circuit?", "Your sketch is linked to a library circuit which cannot be modified.", "Would you like to copy the circuit to your local project and remove the #define circuit link?") == JOptionPane.YES_OPTION) {             
+  //            Base.showMessage("Library File", "This is a library circuit, it cannot be edited directly. Please save to a new location to edit.");
+  //            Base.activeEditor.handleSaveAs();
+                try {
+                  Base.copyDir(fileXise.getParentFile(), new File(Base.getActiveSketchPath()+"/circuit") );
+                } catch (IOException ie) { }
+                String text = editor.getText();
+                String pattern = "#define\\s+circuit\\s+.*";
+                Pattern r = Pattern.compile(pattern, Pattern.CASE_INSENSITIVE);
+                Matcher m = r.matcher(text);
+                if (m.find()) {
+                  //String newText = m.replaceAll("//#define circuit ");
+                  String newText = m.replaceAll("");
+                  editor.setText(newText);
+                  editor.handleSave(false);
+                }
+                fileXise = getLibraryFile("#define\\s+circuit", "xise.file");
+                Base.openURL("file://" + fileXise.toString());
+              }
+              //Base.showMessage("Saved", "Don't forget to remove the \"#define circuit\" statement before editing the circuit.");
+          }
+        } else
+          Base.showMessage("Cannot Edit Library Files", "Sorry, we cannot edit library files, you must save to a user directory before editing the circuit.");
       }
       else
         Base.showMessage("Not Found", "Sorry, no Xilinx ISE project file found in the libraries or project directory.");
