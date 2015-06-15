@@ -23,9 +23,12 @@
 package processing.app;
 
 import cc.arduino.packages.UploaderAndMonitorFactory;
+
 import com.jcraft.jsch.JSchException;
+
 import processing.app.debug.*;
 import processing.app.forms.PasswordAuthorizationDialog;
+import processing.app.helpers.PreferencesMap;
 import processing.app.helpers.PreferencesMapException;
 import processing.app.syntax.*;
 import processing.app.tools.*;
@@ -52,6 +55,9 @@ import javax.swing.undo.*;
 import cc.arduino.packages.BoardPort;
 import cc.arduino.packages.Uploader;
 import cc.arduino.packages.uploaders.SerialUploader;
+
+
+
 
 
 
@@ -838,6 +844,13 @@ public class Editor extends JFrame implements RunnerListener {
     item = new JMenuItem(_("Logic Analyzer"));
     item.addActionListener(new ActionListener() {
         public void actionPerformed(ActionEvent e) {
+          if (Base.showYesNoQuestion(Base.activeEditor, "Load Logic Analyzer?", "Would you like to load a Logic Analyzer circuit to the Papilio board?", "This will overwrite any circuit you already have loaded.") == JOptionPane.YES_OPTION) {          
+            PreferencesMap prefs = Preferences.getMap();
+            prefs.putAll(Base.getBoardPreferences());
+            
+            String laLocation = Base.getToolsPath() + "/" + prefs.get("logicanalyzer.file");
+            Base.openURL("file://" + laLocation);
+          }
           Base.openURL(_("tools://Logic_Analyzer.sh"));
         }
       });

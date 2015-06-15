@@ -246,7 +246,7 @@ public class Platform extends processing.app.Platform {
     if (url.endsWith(".sh")){
       String bashPath = Base.getToolsPath() + "\\sh.bat ";
       //Base.showMessage("title",bashPath + url);
-      Runtime.getRuntime().exec("cmd /c start " + bashPath + url );
+      Runtime.getRuntime().exec("cmd /C start /B " + bashPath + url );
       return;
     }
 /* 	if (url.endsWith(".xtcl")){

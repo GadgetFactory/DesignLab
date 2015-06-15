@@ -18,6 +18,7 @@ zpuino_papilio_one250.bitloader.file=p1_250k/zpuino-1.0-PapilioOne-S3E250-Vanill
 zpuino_papilio_one250.xise.file=circuit/PSL_Papilio_One_250K.xise
 zpuino_papilio_one250.pdf.file=circuit/schematic_papilio_one_250k.pdf
 zpuino_papilio_one250.bit.file=circuit/250K/papilio_one_250k.bit
+zpuino_papilio_one250.logicanalyzer.file=logicanalyzers/250K/Sump_Logic_Analyzer_P1_250K_2.12.bit
 zpuino_papilio_one250.sch.file=circuit/Papilio_One_250K.sch
 ##############################################################
 zpuino_papilio_one500.name=Papilio One (500K) - ZPUino
@@ -42,6 +43,7 @@ zpuino_papilio_one500.xise.file=circuit/PSL_Papilio_One_500K.xise
 zpuino_papilio_one500.sch.file=circuit/Papilio_One_500K.sch
 zpuino_papilio_one500.pdf.file=circuit/schematic_papilio_one_500k.pdf
 zpuino_papilio_one500.bit.file=circuit/500K/papilio_one_500k.bit
+zpuino_papilio_one500.logicanalyzer.file=logicanalyzers/500K/Sump_Logic_Analyzer_P1_500K_2.12.bit
 ##############################################################
 zpuino_papilio_one500vps.name=Papilio One (500K) - ZPUino Hyperion
 zpuino_papilio_one500vps.boardid=0xb4010f00 
@@ -64,6 +66,7 @@ zpuino_papilio_one500vps.xise.file=circuit/PSL_Papilio_One_500K.xise
 zpuino_papilio_one500vps.sch.file=circuit/Papilio_One_500K.sch
 zpuino_papilio_one500vps.pdf.file=circuit/schematic_papilio_one_500k.pdf
 zpuino_papilio_one500vps.bit.file=circuit/500K/papilio_one_500k.bit
+zpuino_papilio_one500vps.logicanalyzer.file=logicanalyzers/500K/papilio_one_500k.bit
 ##############################################################
 zpuino_papilio_prolx9van.name=Papilio Pro - ZPUino
 zpuino_papilio_prolx9van.vid.0=0x0403
@@ -92,6 +95,7 @@ zpuino_papilio_prolx9van.xise.file=circuit/PSL_Papilio_Pro_LX9.xise
 zpuino_papilio_prolx9van.sch.file=circuit/Papilio_Pro.sch
 zpuino_papilio_prolx9van.pdf.file=circuit/schematic_papilio_pro.pdf
 zpuino_papilio_prolx9van.bit.file=circuit/LX9/papilio_pro.bit
+zpuino_papilio_prolx9van.logicanalyzer.file=logicanalyzers/LX9/papilio_pro.bit
 ##############################################################
 zpuino_papilio_duolx9van.name=Papilio DUO FPGA 512KB - ZPUino
 zpuino_papilio_duolx9van.boardid=0xB4051300
@@ -113,6 +117,7 @@ zpuino_papilio_duolx9van.xise.file=circuit/PSL_Papilio_DUO_LX9.xise
 zpuino_papilio_duolx9van.sch.file=circuit/Papilio_DUO_LX9.sch
 zpuino_papilio_duolx9van.pdf.file=circuit/schematic_papilio_DUO.pdf
 zpuino_papilio_duolx9van.bit.file=circuit/DUO_LX9/papilio_duo_lx9.bit
+zpuino_papilio_duolx9van.logicanalyzer.file=logicanalyzers/DUO_LX9/papilio_duo_lx9.bit
 ##############################################################
 zpuino_papilio_duolx9van2.name=Papilio DUO FPGA 2MB - ZPUino
 zpuino_papilio_duolx9van2.vid.0=0x0403
@@ -141,4 +146,5 @@ zpuino_papilio_duolx9van2.scg.file=circuit/Papilio_DUO_LX9.sch
 zpuino_papilio_duolx9van2.pdf.file=circuit/schematic_papilio_DUO.pdf
 zpuino_papilio_duolx9van2.bit.file=circuit/DUO_LX9/papilio_duo_lx9.bit
 zpuino_papilio_duolx9van2.sch.file=circuit/DUO_LX9/papilio_duo_lx9.bit
+zpuino_papilio_duolx9van2.logicanalyzer.file=logicanalyzers/DUO_LX9/papilio_duo_lx9.bit
 ##############################################################

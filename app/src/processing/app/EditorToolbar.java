@@ -153,7 +153,7 @@ public class EditorToolbar extends JComponent implements MouseInputListener, Key
     buttonImages = new Image[BUTTON_COUNT][3];
 
       for (int i = 0; i < BUTTON_COUNT; i++) {
-      if (i == 6)   //skip the tools for now
+      if (i == 7)   //skip the tools for now
         i = 9;
       for (int state = 0; state < 3; state++) {
         Image image = createImage(BUTTON_WIDTH, BUTTON_HEIGHT);
@@ -195,7 +195,7 @@ public class EditorToolbar extends JComponent implements MouseInputListener, Key
 
       int offsetX = 3;
       for (int i = 0; i < buttonCount; i++) {
-        if (i == 6)   //skip the tools for now
+        if (i == 7)   //skip the tools for now
           i = 9;
         x1[i] = offsetX;
         if (i == 2 || i == 6 || i == 9 || i ==10) x1[i] += BUTTON_GAP;
@@ -239,7 +239,7 @@ public class EditorToolbar extends JComponent implements MouseInputListener, Key
       if (currentRollover != SERIAL)
         //by dhia
         //g.drawString(status, (buttonCount-1) * BUTTON_WIDTH + 10 * BUTTON_GAP, statusY);
-        g.drawString(status, (buttonCount-5) * BUTTON_WIDTH + 10 * BUTTON_GAP, statusY);
+        g.drawString(status, (buttonCount-4) * BUTTON_WIDTH + 10 * BUTTON_GAP, statusY);
       else {
         int statusX = x1[SERIAL] - BUTTON_GAP;
         statusX -= g.getFontMetrics().stringWidth(status);
@@ -406,6 +406,12 @@ public class EditorToolbar extends JComponent implements MouseInputListener, Key
       Base.openURL(_("tools://Papilio_Loader.sh"));
       break;
     case OLS:
+      if (Base.showYesNoQuestion(Base.activeEditor, "Load Logic Analyzer?", "Would you like to load a Logic Analyzer circuit to the Papilio board?", "This will overwrite any circuit you already have loaded.") == JOptionPane.YES_OPTION) {          
+        prefs.putAll(Base.getBoardPreferences());
+        
+        String laLocation = Base.getToolsPath() + "/" + prefs.get("logicanalyzer.file");
+        Base.openURL("file://" + laLocation);
+      }
       Base.openURL(_("tools://Logic_Analyzer.sh"));
       break;
     case VIRTUAL_INSTRUMENTS:
