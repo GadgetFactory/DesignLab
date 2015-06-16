@@ -1,3 +1,18 @@
+DesignLab 1.0.7 - 2015.06.16
+[ide]
+	-Fix problem with saving a new project and then having to save again when opening library.
+	-When opening Logic Analyzer project there is now an option to load a LA bit file to the FPGA.
+	-LA icon added to menu bar.
+	
+[DesignLab Libraries]
+	-Benchy Logic Analyzer library updated with 16 and 32 Channel circuit symbols.
+	-SmartMatrix RGB Panel Library added. (Color Correction not enabled.)
+	-RGB Panel circuit symbol and wing symbol added.
+	-1-Pixel Pacman working with SmartMatrix RGB Panel library.
+	-Animated GIFs working with SmartMatrix RGB Panel library.
+	-Add Wing buses to ucf files.
+	-Gameduino library fixed and fully working again.
+
 DesignLab 1.0.6 - 2015.05.13
 [ide]
 Fix CTL-Z opening a new ZPUino project instead of undo edit.
