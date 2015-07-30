@@ -1,6 +1,6 @@
 #include "LiquidCrystal.h"
 
-#include <stdio.h>
+#include <zstdio.h>
 #include <string.h>
 #include <inttypes.h>
 #include "Arduino.h"
