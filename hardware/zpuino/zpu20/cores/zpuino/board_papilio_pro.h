@@ -135,58 +135,6 @@
 #define WING_C_14 FPGA_PIN_P16
 #define WING_C_15 FPGA_PIN_P17
 
-
-#define WING_AL0 0
-#define WING_AL1 1
-#define WING_AL2 2
-#define WING_AL3 3
-#define WING_AL4 4
-#define WING_AL5 5
-#define WING_AL6 6
-#define WING_AL7 7
-#define WING_AH0 8
-#define WING_AH1 9
-#define WING_AH2 10
-#define WING_AH3 11
-#define WING_AH4 12
-#define WING_AH5 13
-#define WING_AH6 14
-#define WING_AH7 15
-
-#define WING_BL0 16
-#define WING_BL1 17
-#define WING_BL2 18
-#define WING_BL3 19
-#define WING_BL4 20
-#define WING_BL5 21
-#define WING_BL6 22
-#define WING_BL7 23
-#define WING_BH0 24
-#define WING_BH1 25
-#define WING_BH2 26
-#define WING_BH3 27
-#define WING_BH4 28
-#define WING_BH5 29
-#define WING_BH6 30
-#define WING_BH7 31
-        
-#define WING_CL0 32
-#define WING_CL1 33
-#define WING_CL2 34
-#define WING_CL3 35
-#define WING_CL4 36
-#define WING_CL5 37
-#define WING_CL6 38
-#define WING_CL7 39
-#define WING_CH0 40
-#define WING_CH1 41
-#define WING_CH2 42
-#define WING_CH3 43
-#define WING_CH4 44
-#define WING_CH5 45
-#define WING_CH6 46
-#define WING_CH7 47
-
 //Wing 1 Column A
 #define WA0 0
 #define WA1 1

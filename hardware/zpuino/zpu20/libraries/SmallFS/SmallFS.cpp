@@ -324,7 +324,7 @@ int SmallFSFile::readCallback(int s, void (*callback)(unsigned char, void*), voi
 	return save_s;
 }
 
-void SmallFSFile::seek(int pos, int whence)
+int SmallFSFile::seek(int pos, int whence)
 {
 	int newpos;
 
@@ -343,6 +343,8 @@ void SmallFSFile::seek(int pos, int whence)
 
 	seekpos=newpos;
 	SmallFS.seek(seekpos + flashoffset);
+
+        return newpos;
 }
 
 void SmallFS_class::loadSketch(const char *name)
@@ -391,12 +393,19 @@ static ssize_t zf_smallfs_read(void *ptr, void *dest, size_t size)
     return f->read(dest, size);
 }
 
+static ssize_t zf_smallfs_seek(void *ptr, int pos, int whence)
+{
+    SmallFSFile *f = static_cast<SmallFSFile*>(ptr);
+    return f->seek(pos, whence);
+}
+
 static struct zfops zf_smallfs_ops = {
     &zf_smallfs_open,
     NULL,
     &zf_smallfs_read,
     NULL,
-    NULL,
+    &zf_smallfs_seek,
+    NULL
 };
 
 void zf_register_smallfs()
