@@ -324,7 +324,7 @@ int SmallFSFile::readCallback(int s, void (*callback)(unsigned char, void*), voi
 	return save_s;
 }
 
-void SmallFSFile::seek(int pos, int whence)
+int SmallFSFile::seek(int pos, int whence)
 {
 	int newpos;
 
@@ -343,6 +343,8 @@ void SmallFSFile::seek(int pos, int whence)
 
 	seekpos=newpos;
 	SmallFS.seek(seekpos + flashoffset);
+
+        return newpos;
 }
 
 void SmallFS_class::loadSketch(const char *name)

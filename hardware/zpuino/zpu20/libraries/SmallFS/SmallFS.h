@@ -64,7 +64,7 @@ public:
 	 * @param pos The required position
 	 * @param whence Where to perform seek. Either SEEK_SET, SEEK_CUR or SEEK_END
 	 */
-	void seek(int pos, int whence);
+	int seek(int pos, int whence);
 	/**
 	 * @brief Get the file size.
 	 * @return The file size.
