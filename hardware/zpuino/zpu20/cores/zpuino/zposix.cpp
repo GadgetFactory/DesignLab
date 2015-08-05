@@ -188,7 +188,7 @@ int fstat(int fd, struct stat *buf)
 {
     int ret = -1;
     if (__fds[fd].ops) {
-        if (__fds[fd].ops->read) {
+        if (__fds[fd].ops->fstat) {
             ret = __fds[fd].ops->fstat(__fds[fd].data,buf);
         }
     }
