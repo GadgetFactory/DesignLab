@@ -119,7 +119,7 @@ int ZPUino_GFX_class<uint16_t>::setupHDMI(const modeline_t *mode)
     if (pll.begin(getBaseRegister()+256)!=0) {
         Serial.println("Cannot find PLL??");
         return -1;
-}
+    }
 
     pll.setclkkhz(22500);
     PLL_class::scanBest( pll.getclkkhz(), mode->pixelclock*10, &pllm, &plld, &pllerror);
@@ -134,7 +134,7 @@ int ZPUino_GFX_class<uint16_t>::setupHDMI(const modeline_t *mode)
                 plld*5,
                 plld*10
                )==0) {
-            // Enable display output again.
+        // Enable display output again.
         REG(2)=1;
         if (mode->duplicate) {
             Adafruit_GFX_core<uint16_t>::begin(mode->hdisplay>>1,mode->vdisplay>>1);
@@ -148,27 +148,27 @@ int ZPUino_GFX_class<uint16_t>::setupHDMI(const modeline_t *mode)
 }
 
 template<>
-    void ZPUino_GFX_class<uint16_t>::begin(const modeline_t *mode) {
+void ZPUino_GFX_class<uint16_t>::begin(const modeline_t *mode) {
 
-        if (deviceBegin(0x08, 0x1B)==0 || deviceBegin(0x08,0x1A)==0) {
-            unsigned sizeinfo = REG(0);
+    if (deviceBegin(0x08, 0x1B)==0 || deviceBegin(0x08,0x1A)==0) {
+        unsigned sizeinfo = REG(0);
         unsigned fbsize = (sizeinfo>>16) * (sizeinfo &0xffff);
         Framebuffer<PixType>::allocate(fbsize,(sizeinfo>>16));
         memset(framebuffers,0,Framebuffer<PixType>::getSizeBytes());
         REG(0) = (unsigned)Framebuffer<PixType>::getFramebuffer();
-            Adafruit_GFX_core<uint16_t>::begin(sizeinfo>>16, sizeinfo &0xffff);
+        Adafruit_GFX_core<uint16_t>::begin(sizeinfo>>16, sizeinfo &0xffff);
 
-        } else if (deviceBegin(0x08, 0x1D)==0) {
+    } else if (deviceBegin(0x08, 0x1D)==0) {
         unsigned fbsize = mode->hdisplay * mode->vdisplay;
-            if (mode->duplicate) {
-                fbsize>>=2;
-            }
+        if (mode->duplicate) {
+            fbsize>>=2;
+        }
         Framebuffer<PixType>::allocate(fbsize,mode->hdisplay);
         REG(0) = (unsigned)getFramebuffer();
 
         memset(framebuffers,0,Framebuffer<PixType>::getSizeBytes());
 
-            setupVGA(mode);
+        setupVGA(mode);
     } else if (deviceBegin(0x08, 0x21)==0) {
         unsigned fbsize = mode->hdisplay * mode->vdisplay;
         if (mode->duplicate) {
@@ -181,10 +181,10 @@ template<>
 
         setupHDMI(mode);
 
-        } else {
-            Serial.println("Device not found");
-        }
+    } else {
+        Serial.println("Device not found");
     }
+}
 
 template<>
 void ZPUino_GFX_class<uint16_t>::begin(const displaymode_t mode) {
@@ -241,7 +241,7 @@ void ZPUino_GFX_class<uint16_t>::begin(const displaymode_t mode) {
 
 
 template<>
-    void ZPUino_GFX_class<uint16_t>::drawFastVLine(int x, int y, int h, uint16_t color)
+void ZPUino_GFX_class<uint16_t>::drawFastVLine(int x, int y, int h, uint16_t color)
 {
     int delta = width();
     uint16_t *p = getPosition(x,y);
@@ -341,34 +341,34 @@ int ZPUino_GFX_class<uint8_t>::setupVGA(const modeline_t *mode)
 
 
 template<>
-    void ZPUino_GFX_class<uint8_t>::begin(const modeline_t *mode) {
+void ZPUino_GFX_class<uint8_t>::begin(const modeline_t *mode) {
 
-        if (deviceBegin(0x08, 0x1B)==0 || deviceBegin(0x08,0x1A)==0) {
-            unsigned sizeinfo = REG(0);
-            unsigned fbsize = (sizeinfo>>16) * (sizeinfo &0xffff) * sizeof(PixType);
-            framebuffers=(uint32_t*)malloc(fbsize);
-            memset(framebuffers,0,fbsize);
-            REG(0) = (unsigned)framebuffers;
-            Adafruit_GFX_core<uint8_t>::begin(sizeinfo>>16, sizeinfo &0xffff);
+    if (deviceBegin(0x08, 0x1B)==0 || deviceBegin(0x08,0x1A)==0) {
+        unsigned sizeinfo = REG(0);
+        unsigned fbsize = (sizeinfo>>16) * (sizeinfo &0xffff) * sizeof(PixType);
+        framebuffers=(uint32_t*)malloc(fbsize);
+        memset(framebuffers,0,fbsize);
+        REG(0) = (unsigned)framebuffers;
+        Adafruit_GFX_core<uint8_t>::begin(sizeinfo>>16, sizeinfo &0xffff);
 
-        } else if (deviceBegin(0x08, 0x1D)==0) {
-            unsigned fbsize = mode->hdisplay * mode->vdisplay * sizeof(uint8_t);
-            if (mode->duplicate) {
-                fbsize>>=2;
-            }
-            framebuffers=(uint32_t*)malloc(fbsize);
-            REG(0) = (unsigned)framebuffers;
-
-            memset(framebuffers,0,fbsize);
-
-            setupVGA(mode);
-        } else {
-            Serial.println("Device not found");
+    } else if (deviceBegin(0x08, 0x1D)==0) {
+        unsigned fbsize = mode->hdisplay * mode->vdisplay * sizeof(uint8_t);
+        if (mode->duplicate) {
+            fbsize>>=2;
         }
+        framebuffers=(uint32_t*)malloc(fbsize);
+        REG(0) = (unsigned)framebuffers;
+
+        memset(framebuffers,0,fbsize);
+
+        setupVGA(mode);
+    } else {
+        Serial.println("Device not found");
     }
+}
 
 template<>
-    void ZPUino_GFX_class<uint8_t>::drawFastVLine(int x, int y, int h, uint8_t color)
+void ZPUino_GFX_class<uint8_t>::drawFastVLine(int x, int y, int h, uint8_t color)
 {
     int delta = width();
     uint8_t *p = getPosition(x,y);
