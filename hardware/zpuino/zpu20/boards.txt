@@ -147,10 +147,9 @@ zpuino_papilio_duolx9van2.build.extraSflags=-DBOARD_ID=0xB4051300
 zpuino_papilio_duolx9van2.bitloader.tool=papilioprog
 zpuino_papilio_duolx9van2.bitloader.file=lx9/zpuino-1.0-PapilioPro-S6LX9-Vanilla-1.0.bit
 zpuino_papilio_duolx9van2.xise.file=circuit/PSL_Papilio_DUO_LX9.xise
-zpuino_papilio_duolx9van2.scg.file=circuit/Papilio_DUO_LX9.sch
+zpuino_papilio_duolx9van2.sch.file=circuit/Papilio_DUO_LX9.sch
 zpuino_papilio_duolx9van2.pdf.file=circuit/schematic_papilio_DUO.pdf
 zpuino_papilio_duolx9van2.bit.file=circuit/DUO_LX9/papilio_duo_lx9.bit
-zpuino_papilio_duolx9van2.sch.file=circuit/DUO_LX9/papilio_duo_lx9.bit
 zpuino_papilio_duolx9van2.logicanalyzer.file=logicanalyzers/DUO_LX9/papilio_duo_lx9.bit
 zpuino_papilio_duolx9van2.logicanalyzer.message="Channels 0-15 are connected to the D Wing and channels 16-31 are connected to the C Wing."
 ##############################################################
