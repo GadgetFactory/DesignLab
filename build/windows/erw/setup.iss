@@ -8,12 +8,12 @@
 AppID={{EA516BE9-B80D-47A2-880B-457C76A42B05}
 ;AppName=Arduino Enhanced Release for Windows (without Java)
 AppName=Papilio DesignLab
-AppVersion=v1.0.7
+AppVersion=v1.0.8
 AppPublisher=Gadget Factory
 AppPublisherURL=http://papilio.cc/
 AppSupportURL=http://www.gadgetfactory.net/
 AppUpdatesURL=http://papilio.cc/
-DefaultDirName={sd}\DesignLab-1.0.7
+DefaultDirName={sd}\DesignLab-1.0.8
 DefaultGroupName=Papilio DesignLab
 OutputDir=setup
 ;OutputBaseFilename=setup
@@ -41,9 +41,9 @@ Name: "installdrivers"; Description: "Show me options to Configure Papilio Drive
 Source: "..\work\*"; DestDir: "{app}"; Flags: ignoreversion createallsubdirs recursesubdirs;
 
 [Icons]
-Name: "{group}\DesignLab 1.0.7"; Filename: {app}\DesignLab.exe; 
+Name: "{group}\DesignLab 1.0.7b"; Filename: {app}\DesignLab.exe; 
 Name: "{group}\Install Papilio Drivers"; Filename: {app}\drivers\install.bat; Flags: excludefromshowinnewinstall; 
-Name: "{userdesktop}\DesignLab 1.0.7"; Filename: {app}\DesignLab.exe; Tasks: desktopicon; 
+Name: "{userdesktop}\DesignLab 1.0.7b"; Filename: {app}\DesignLab.exe; Tasks: desktopicon; 
 
 ;[Registry]
 ;Root: HKCR; SubKey: xapfile\shell\open\; ValueType: string; ValueName: command; ValueData: "{app}\wp7-deploy.exe"; Flags: UninsDeleteKey; Tasks: xapfiletype;
