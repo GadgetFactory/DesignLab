@@ -33,6 +33,11 @@ Processing and Wiring.
 
 Icon and about image designed by ToDo: http://www.todo.to.it/
 
+DesignLab 1.0.8 - 2017.01.04
+[DesignLab Libraries]
+	-Added a new Video Audio Player example.
+	-Fixes for RetroCade Synth libraries.
+
 DesignLab 1.0.7 - 2015.06.16
 [ide]
 	-Fix problem with saving a new project and then having to save again when opening library.
