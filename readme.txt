@@ -212,3 +212,5 @@ ZAP 2.0.0 BETA - 2013.06.04
 * Libraries moved to ZPUino hardware type
 * Experimental ZPUino 2.0 plugin added
 
+
+Join the chat at https://gitter.im/GadgetFactory/DesignLab
